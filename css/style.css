@@ -30,7 +30,6 @@ Table of Content:
 10/ blog 
 11/ contact 
 12/ footer 
-13/ Additions By Calvin Kim
 =====================================================================*/
 /*----------------------------------------------------*/
 /*font Variables*/
@@ -106,8 +105,6 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 iframe {
   border: none;
-  overflow: hidden;
-  box-shadow: 6px 6px 14px 0px black;
 }
 
 i:before {
@@ -182,58 +179,19 @@ i:before {
   top: 0px;
   width: 100%;
   z-index: 30;
-  /*
-  padding: 0px 0px;
-*/
+  padding: 0px 45px;
 }
 
 .main_menu_area .navbar {
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding: 0px;
   border-radius: 0px;
   background-color: transparent !important;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-
-}
-
-/*
-Responsive navigation bar, brand logo fix by Calvin
-*/
-
-@media (max-width: 767px) {
-  .navbar-brand{
-    padding-left: 0%;
-    position: relative;
-    right: 0%;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .navbar-brand{
-    padding-left: 25%;
-    position: relative;
-    right: 35%;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-brand{
-    padding-left: 5%;
-    position: relative;
-    right: 0%;
-  }
 }
 
 .main_menu_area .navbar .navbar-toggler {
   border: none;
   border-radius: 0px;
   padding: 0px;
-  /* position: absolute; */
-  /* right: 20px; */
 }
 
 .main_menu_area .navbar .navbar-toggler span {
@@ -242,25 +200,16 @@ Responsive navigation bar, brand logo fix by Calvin
   display: block;
   background: #0b1033;
   margin-bottom: 3px;
-  margin-left: 3px;
-  margin-right: 3px;
-
-  border-radius: 5px;
-}
-
-.main_menu_area .navbar .navbar-toggler span:first-child {
-  margin-top: 5px;
 }
 
 .main_menu_area .navbar .navbar-toggler span:last-child {
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 992px) {
   .main_menu_area .navbar .navbar-collapse {
     text-align: right;
     display: block !important;
-
   }
 }
 
@@ -280,7 +229,7 @@ Responsive navigation bar, brand logo fix by Calvin
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: .65px; 
+  letter-spacing: .65px;
   padding: 0px;
   line-height: 118px;
   -webkit-transition: all 400ms linear 0s;
@@ -356,14 +305,13 @@ Responsive navigation bar, brand logo fix by Calvin
   color: #0b1033;
 }
 
-.main_menu_area .navbar_fixed {
+.main_menu_area.navbar_fixed {
   position: fixed;
   width: 100%;
-  height: 38pt;
-  top: -54pt;
+  top: -70px;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   -webkit-transform: translateY(70px);
   -ms-transform: translateY(70px);
   transform: translateY(70px);
@@ -376,8 +324,8 @@ Responsive navigation bar, brand logo fix by Calvin
   z-index: 999999;
 }
 
-.main_menu_area .navbar_fixed .navbar .navbar-nav li a {
-  line-height: 50px;
+.main_menu_area.navbar_fixed .navbar .navbar-nav li a {
+  line-height: 70px;
 }
 
 /* End Main Menu Area css
@@ -1957,11 +1905,6 @@ Responsive navigation bar, brand logo fix by Calvin
   margin-bottom: 100px;
 }
 
-.blog_main_item .c12{
-  padding: 0pt 0pt 0pt 0pt;
-
-}
-
 .blog_main_item:last-child {
   margin-bottom: 0px;
 }
@@ -2081,7 +2024,6 @@ Responsive navigation bar, brand logo fix by Calvin
   right: 0px;
   top: 0px;
   z-index: 3;
-  margin-top: 70px;
 }
 
 .search_widget .input-group .input-group-btn .btn-secondary {
@@ -2436,17 +2378,12 @@ Responsive navigation bar, brand logo fix by Calvin
 .f_subs_widget .input-group .input-group-btn {
   margin-left: 0px;
   display: block;
-  margin-top: 70px;
-  padding-top:75px
+  margin-top: 25px;
 }
 
 .f_subs_widget .input-group .input-group-btn .submit_btn {
   margin-left: 0px;
   border-radius: 35px !important;
-  position: relative;
-  margin-left: 0px;
-  padding-left: 0px;
-  left: 0px;
 }
 
 .f_subs_widget .input-group .input-group-btn .submit_btn:hover {
@@ -2490,53 +2427,6 @@ Responsive navigation bar, brand logo fix by Calvin
 }
 
 /* End Footer Area css
-============================================================================================ */
-/*---------------------------------------------------- */
-
-/*----------------------------------------------------*/
-/* 13. Calvin Area css
-============================================================================================ */
-
-.google_doc {
-  position: absolute;
-  /*left: 0px;
-  top: 0px;*/
-  width: 90%;
-  height: 90%;
-  /*z-index: 30;*/
- 
-  /*overflow: scroll; */
-            /*width: 1000px; */
-            margin-top: 5%;
-        margin-bottom: 5%;
-       /* margin-left: 5%;
-        margin-right: 5%;*/
-        -moz-border-radius: 12px;
-        -webkit-border-radius: 12px;
-        border-radius: 12px;
-        -moz-box-shadow: 4px 4px 14px #000;
-        -webkit-box-shadow: 4px 4px 14px #000;
-        box-shadow: 4px 4px 14px #000;
-}
-
-.google_area {
-  position: relative;
-  z-index: 3;
-  overflow: hidden;
-}
-
-.google_area:before {
-  content: "";
-  background: url(../img/banner/banner-bg.png) no-repeat scroll center right;
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  height: 100%;
-  max-width: 1233px;
-  width: 100%;
-}
-
-/* End 13. Calvin Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 

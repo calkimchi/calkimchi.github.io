@@ -92,8 +92,7 @@
         padding: 0px 0px;
     }
     .navbar-light .navbar-brand {
-        /* padding: 5px 0px 1px 110px; */
-        /* left: -40%; */
+        padding: 20px 0px 20px 15px;
     }
     .main_menu_area .navbar .navbar-nav li {
         display: block;
@@ -121,16 +120,11 @@
     .main_menu_area .navbar .navbar-collapse {
         background: rgba(0, 0, 0, 1);
         max-height: 306px;
-        overflow-y: hidden;
-        /* height: 100px; */
+        overflow-y: scroll;
     }
     .main_menu_area .navbar .navbar-toggler {
-        /* padding: 0px 15px 0px 0px; */
+        padding: 0px 15px 0px 0px;
         cursor: pointer;
-        /* margin-right: 10pt; */
-        position: fixed;
-        right: 10pt;
-        top: 15pt;
     }
     .main_menu_area .navbar .navbar-nav li.submenu .dropdown-menu {
         background: transparent;
