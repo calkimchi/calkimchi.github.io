@@ -1,4 +1,4 @@
-/*----------------------------------------------------
+----------------------------------------------------
 @File: Default Styles
 @Author: Rocky
 @URL: http://wethemez.com
@@ -173,6 +173,16 @@ i:before {
 /*----------------------------------------------------*/
 /* Main Menu Area css
 ============================================================================================ */
+/*Calvin Added*/
+
+.nav-item {
+
+  height:51px;
+}
+
+/*End Calvin Added*/
+
+
 .main_menu_area {
   position: absolute;
   left: 0px;
@@ -1505,6 +1515,7 @@ i:before {
 .world_map_inner {
   text-align: center;
   position: relative;
+  box-shadow: 0px 0px 46px 15px rgba(0, 0, 0, 0.15); 
 }
 
 .bd-callout {
@@ -2430,4 +2441,8 @@ i:before {
 ============================================================================================ */
 /*---------------------------------------------------- */
 
-/*# sourceMappingURL=style.css.map */
+/*Calvin Added*/
+
+
+
+/*# sourceMappingURL=style.css.map 
