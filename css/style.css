@@ -1,4 +1,4 @@
-/*----------------------------------------------------
+----------------------------------------------------
 @File: Default Styles
 @Author: Rocky
 @URL: http://wethemez.com
@@ -173,6 +173,18 @@ i:before {
 /*----------------------------------------------------*/
 /* Main Menu Area css
 ============================================================================================ */
+/*Calvin Added*/
+
+.nav-item {
+
+  height:51px;
+}
+
+
+
+/*End Calvin Added*/
+
+
 .main_menu_area {
   position: absolute;
   left: 0px;
@@ -198,18 +210,23 @@ i:before {
   height: 3px;
   width: 25px;
   display: block;
-  background: #0b1033;
+  background: #ffffff;
   margin-bottom: 3px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-
+.main_menu_area .navbar .navbar-toggler span:first-child {
+  margin-top: 10px;
+}
 .main_menu_area .navbar .navbar-toggler span:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 992px) {
   .main_menu_area .navbar .navbar-collapse {
     text-align: right;
     display: block !important;
+
   }
 }
 
@@ -391,15 +408,16 @@ i:before {
 .main_slider_area {
   background: url(../img/home-slider/slider-bg-1.png) no-repeat scroll center center;
   background-size: cover;
+  max-height: 600px;
 }
 
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .first_text {
   font-weight: normal !important;
-  color: #0b1033;
+  color: #ffffff;
 }
 
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .secand_text {
-  color: #6b7d8e;
+  color: #9b9d9e;
 }
 
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .more_btn {
@@ -588,6 +606,7 @@ i:before {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
+  border-radius: 10px;
 }
 
 .feature_item h4 {
@@ -1505,6 +1524,7 @@ i:before {
 .world_map_inner {
   text-align: center;
   position: relative;
+  box-shadow: 0px 0px 46px 15px rgba(0, 0, 0, 0.15); 
 }
 
 .bd-callout {
@@ -2430,4 +2450,118 @@ i:before {
 ============================================================================================ */
 /*---------------------------------------------------- */
 
-/*# sourceMappingURL=style.css.map */
+/*Calvin Added*/
+
+/*Radio Buttons*/
+
+.btn-group-toggle {
+  position: relative; 
+  top:-4px; 
+  left: 0px; 
+  width: 100%;
+/*
+  background-color: #ffffff;
+  background-image: none;
+  background-size: 0px 0px;
+*/
+
+
+}
+
+.btn-secondary {
+  width:12%;
+  height:12%;
+  font-size:1.2em ;
+}
+
+/*Skeleton Screens*/
+
+.skeleton {
+  background-repeat: no-repeat;
+  background-image: 
+    /* layer 2: avatar */
+    /* white circle with 16px radius */
+    
+    /* layer 1: title */
+    /* white rectangle with 40px height */
+    linear-gradient(white 40px, transparent 80%),
+    /* layer 0: card bg */
+    /* gray rectangle that covers whole element */
+    linear-gradient(gray 100%, transparent 80%);
+}
+
+.loading{
+
+  position: relative;
+  background-color: #E2E2E2;
+
+  &.card-image {
+    border-radius: 0;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    animation: loading 1.5s infinite;
+  }
+}
+
+@keyframes loading {
+    100% {
+      transform: translateX(100%);
+    }
+}
+
+.owl-stage-outer {
+
+  
+  width: 100%;
+}
+
+.shap_slider_inner {
+
+  margin-left: 0px;
+}
+
+.img-overlay {
+
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+   opacity: 1;
+  transition: .5s ease;
+}
+.img-overlay:hover {
+  opacity:0;
+
+}
+
+.item{
+
+  /*min-width:315px !important ;*/
+  overflow:hidden;
+ /* position: center;*/
+  padding-left:20px;
+  padding-right:20px;
+/*  min-width:360px;*/
+
+}
+
+.no-js .u-horizontal-scrollbar .review .island{
+  position:center;
+  overflow-x:hidden ; 
+  min-width:330px;
+  padding:0px 0px 0px 0px;
+}
+
+
+
+/*# sourceMappingURL=style.css.map 

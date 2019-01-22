@@ -1,0 +1,4 @@
+#1 week of cached files
+<filesMatch ".(css|jpg|jpeg|png|gif|js|iso)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>

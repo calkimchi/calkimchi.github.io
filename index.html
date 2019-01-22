@@ -10,7 +10,9 @@
         <title>Sierra</title>
 
         <!-- Icon css link -->
-        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <!-- <link href="css/font-awesome.min.css" rel="stylesheet">
+         -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         
@@ -33,34 +35,33 @@
         <![endif]-->
     </head>
     <body>
+
+
+        <script>HTMLImporter.import("my-template.html");</script>
         
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="overflow-y:hidden">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                        <li class="nav-item dropdown submenu">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="#index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contentcards">Content Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ourstory">Our Story</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Pricing</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="visibility:hidden;">
+                             <!-- Couldn't get rid of this submenu element, otherwise, toggle menu wouldn't work, so I just hid it -Calvin -->
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -69,8 +70,18 @@
         
         
         <!--================Slider Area =================-->
-        <section class="main_slider_area">
+
+        <!-- INDEX ANCHOR LINK -->
+        <a id="index"></a>
+
+
+        <section class="main_slider_area loading" style="">
+
+            
+
             <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
+
+
                 <ul>
                     <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                         <!-- LAYER NR. 1 -->
@@ -79,7 +90,7 @@
                             data-x="['left','left','left','left','15','center']" 
                             data-hoffset="['0','80','80','0']" 
                             data-y="['top','top','top','top']" 
-                            data-voffset="['400','400','400','250','180','180']" 
+                            data-voffset="['150','150','150','150','100','180']" 
                             data-fontsize="['72','72','72','50','50','30']"
                             data-lineheight="['82','82','82','62','62','42']"
                             data-width="['none']"
@@ -88,13 +99,13 @@
                             data-type="text" 
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">Choose a powerful <br />design for your Start-up</div>
+                            data-textAlign="['left','left','left','left','left','center']">Customize a modern  <br />website design </div>
                             
                             <div class="tp-caption tp-resizeme secand_text" 
                                 data-x="['left','left','left','left','15','center']" 
                                 data-hoffset="['0','80','80','0']" 
                                 data-y="['top','top','top','top']" 
-                                data-voffset="['575','575','575','400','320','300']"  
+                                data-voffset="['350','350','340','280','250','270']"  
                                 data-fontsize="['24','24','24','18','16','16']"
                                 data-lineheight="['36','36','36','26','26','26']"
                                 data-width="['none','none','none','none','none']"
@@ -104,7 +115,7 @@
                                 data-responsive_offset="on"
                                 data-transform_idle="o:1;"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left','left','center']">Get your freebie template now!
+                                data-textAlign="['left','left','left','left','left','center']">Just the way you wanted!
                             </div>
                             
                             <div class="tp-caption tp-resizeme" 
@@ -119,7 +130,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Discover</a>
+                                <a class="more_btn" href="#">Button</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -138,6 +149,13 @@
                                 <img src="img/home-slider/slider-m-1.png" alt="">
                             </div>
                         </div>
+
+                        <!-- LIST OPTION 1 BACKGROUND IMAGE -->
+                       
+
+                            <img class="btn-group-toggle" src="img/home-slider/slider-bg-1.jpg" id="option1" alt="">
+                            <!-- Grey overlay -->
+                            <div class="img-overlay"></div>
                     </li>
                     <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYERS -->
@@ -149,7 +167,7 @@
                             data-x="['left','left','left','left','15','center']" 
                             data-hoffset="['0','80','80','0']" 
                             data-y="['top','top','top','top']" 
-                            data-voffset="['400','400','400','250','180','180']" 
+                            data-voffset="['150','150','150','150','100','180']" 
                             data-fontsize="['72','72','72','50','50','30']"
                             data-lineheight="['82','82','82','62','62','42']"
                             data-width="['none']"
@@ -158,13 +176,13 @@
                             data-type="text" 
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">Choose a powerful <br />design for your Start-up</div>
+                            data-textAlign="['left','left','left','left','left','center']">Responsive and <br />Clean </div>
                             
                             <div class="tp-caption tp-resizeme secand_text" 
                                 data-x="['left','left','left','left','15','center']" 
                                 data-hoffset="['0','80','80','0']" 
                                 data-y="['top','top','top','top']" 
-                                data-voffset="['575','575','575','400','320','300']"  
+                                data-voffset="['350','350','340','280','250','270']"
                                 data-fontsize="['24','24','24','18','16','16']"
                                 data-lineheight="['36','36','36','26','26','26']"
                                 data-width="['none','none','none','none','none']"
@@ -174,7 +192,7 @@
                                 data-responsive_offset="on"
                                 data-transform_idle="o:1;"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left','left','center']">Get your freebie template now!
+                                data-textAlign="['left','left','left','left','left','center']">On mobile, tablets, and desktops.
                             </div>
                             
                             <div class="tp-caption tp-resizeme" 
@@ -189,7 +207,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Discover</a>
+                                <a class="more_btn" href="#">Button</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -208,6 +226,11 @@
                                 <img src="img/home-slider/slider-m-1.png" alt="">
                             </div>
                         </div>
+
+                        <!-- LIST OPTION 2 BACKGROUND IMAGE -->
+                         <img class="btn-group-toggle" src="img/home-slider/slider-bg-2.jpg" id="option2" alt="">
+                         <div class="img-overlay"></div>
+
                     </li>
                     <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYERS -->
@@ -219,7 +242,7 @@
                             data-x="['left','left','left','left','15','center']" 
                             data-hoffset="['0','80','80','0']" 
                             data-y="['top','top','top','top']" 
-                            data-voffset="['400','400','400','250','180','180']" 
+                            data-voffset="['150','150','150','150','100','180']" 
                             data-fontsize="['72','72','72','50','50','30']"
                             data-lineheight="['82','82','82','62','62','42']"
                             data-width="['none']"
@@ -228,13 +251,13 @@
                             data-type="text" 
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">Choose a powerful <br />design for your Start-up</div>
+                            data-textAlign="['left','left','left','left','left','center']">Use the menu bar <br />to scroll down</div>
                             
                             <div class="tp-caption tp-resizeme secand_text" 
                                 data-x="['left','left','left','left','15','center']" 
                                 data-hoffset="['0','80','80','0']" 
                                 data-y="['top','top','top','top']" 
-                                data-voffset="['575','575','575','400','320','300']"  
+                                data-voffset="['350','350','340','280','250','270']"  
                                 data-fontsize="['24','24','24','18','16','16']"
                                 data-lineheight="['36','36','36','26','26','26']"
                                 data-width="['none','none','none','none','none']"
@@ -244,7 +267,7 @@
                                 data-responsive_offset="on"
                                 data-transform_idle="o:1;"
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left','left','center']">Get your freebie template now!
+                                data-textAlign="['left','left','left','left','left','center']">Everything is on one page!
                             </div>
                             
                             <div class="tp-caption tp-resizeme" 
@@ -259,7 +282,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Discover</a>
+                                <a class="more_btn" href="#">Your Text Here!</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -275,116 +298,186 @@
                             data-responsive_offset="on" 
                             data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
                             data-textAlign="['left','left','left','left','left','center']">
-                                <img src="img/home-slider/slider-m-1.png" alt="">
+                                
+                               <img src="img/home-slider/slider-m-1.png" alt="">
+                               
                             </div>
+                                
+                            
+
                         </div>
+                               
+                       <!-- LIST OPTION 3 BACKGROUND IMAGE -->
+
+                        <img class="btn-group-toggle" src="img/home-slider/slider-bg-3.jpg" alt="">
+
+                        <div class="img-overlay"></div>
+
                     </li>
+
+                     
                 </ul>
-            </div>
+
+
+            
+                            
         </section>
         <!--================End Slider Area =================-->
-        
+        <!-- 
+        </div>
+
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" style="">
+
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> 2
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> 3
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option4" autocomplete="off"> 4
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option4" autocomplete="off"> 5
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option5" autocomplete="off"> 6
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option6" autocomplete="off"> 7
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option7" autocomplete="off"> 8
+              </label>
+            </div>
+ -->
         <!--================Feature Area =================-->
-        <section class="feature_area">
+        <section class="feature_area" id="contentcards">
             <div class="container">
                 <div class="c_title">
                     <img src="img/icon/title-icon.png" alt="">
-                    <h6>Discover the features</h6>
-                    <h2>We are young but bold</h2>
+                    <h6>Get creative with</h6>
+                    <h2>Cool Content Cards!</h2>
                 </div>
                 <div class="row feature_inner">
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="img/icon/f-icon-1.png" alt="">
+                                <img src="img/icon/f-icon-1-2.jpg" alt="">
                             </div>
-                            <h4>Brand Identity</h4>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                            <h4>Blog Post 1</h4>
+                            <p>Maybe each card could link to your most recent blogs.</p>
                             <a class="more_btn" href="#">Read More</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="img/icon/f-icon-2.png" alt="">
+                                <img src="img/icon/f-icon-2-2.jpg" style="box-shadow: 5px 5px;" alt="">
                             </div>
-                            <h4>Online Marketing</h4>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                            <a class="more_btn" href="#">Read More</a>
+                            <h4>Signature Dish</h4>
+                            <p>Or maybe you're a restaraunt and you want to showcase your best dishes. </p>
+                            <a class="more_btn" href="#">More Details</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <div class="feature_item">
                             <div class="f_icon">
-                                <img src="img/icon/f-icon-3.png" alt="">
+                                <img src="img/icon/f-icon-3-2.jpg" alt="">
                             </div>
-                            <h4>Social Media</h4>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
+                            <h4>Product 1</h4>
+                            <p>Maybe you're a tech company, selling multiple products. Each card could be a product.</p>
                             <a class="more_btn" href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="feature_item">
+                            <div class="f_icon" >
+                                <img src="img/icon/f-icon-4-2.png" style="border-radius: 50px; box-shadow: 5px 3px #888888;" alt="">
+                            </div>
+                           
+                            <h4>Team Member 1</h4>
+                            <p>Maybe you're a startup company and each team member has a bio, blog, or page that links to their content.</p>
+                            <a class="more_btn" href="#">Biography</a>
+
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
         <!--================End Feature Area =================-->
+
         
         <!--================The best slider Area =================-->
-        <section class="best_3d_area">
+        <section class="testimonialspace" id="testimonials">
+            <div style="height:50px"></div>
+        </section>
+        <section class="best_3d_area" >
             <div class="left_3d">
-                <div class="shap_slider_inner owl-carousel">
+
+                <div class="shap_slider_inner owl-carousel" >
+
                     <div class="item">
-                        <h4>“They are the best”</h4>
-                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
+                        <h4>“This could be a testimonial quote from your best customer”</h4>
+                        <p>Testimonials from your customers always show your reliability and experience as a business. Swipe right to see more!</p>
                         <div class="media">
                             <img src="img/team/people/people-5.jpg" alt="">
                             <div class="media-body">
-                                <h5>Chriss Turner</h5>
+                                <h5>Best Customer</h5>
                                 <h6>CEO Enterprise</h6>
                             </div>
                         </div>
                     </div>
                     <div class="item">
-                        <h4>“They are the best”</h4>
-                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
+                        <h4>"Food was great, customer service was amazing, and the restaraunt was clean. 5/5 on Yelp!”</h4>
+                        <p>From the moment that I entered, to the second that I sat down in this restaraunt, I had the greatest experience of my life. The lighting hit off the side of my date's face perfectly as he fed me a piece of juicy chicken.</p>
                         <div class="media">
-                            <img src="img/team/people/people-5.jpg" alt="">
+                            <img src="img/team/people/girl-happy.jpg" alt="">
                             <div class="media-body">
-                                <h5>Chriss Turner</h5>
-                                <h6>CEO Enterprise</h6>
+                                <h5>Janelle K.</h5>
+                                <h6>Yelp Elite</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <h4>“They are the best”</h4>
-                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus.</p>
-                        <div class="media">
-                            <img src="img/team/people/people-5.jpg" alt="">
-                            <div class="media-body">
-                                <h5>Chriss Turner</h5>
-                                <h6>CEO Enterprise</h6>
-                            </div>
-                        </div>
+                    <div class="item" style="">
+                        <h4 >In fact, Why not just directly embed actual Yelp reviews?</h4>
+                        <span class="yelp-review" data-review-id="8POCR8O6NX9Czdis2JUs5Q" data-hostname="www.yelp.com" style="">Read 
+                            <a href="https://www.yelp.com/user_details?userid=lvCmlo9iFFlyRu48rKvJcA" rel="nofollow noopener">Shaina S.</a>'s 
+                            <a href="https://www.yelp.com/biz/alexs-dry-cleaning-valet-palo-alto?hrid=8POCR8O6NX9Czdis2JUs5Q" rel="nofollow noopener">review</a> of 
+                            <a href="https://www.yelp.com/biz/Iaa0Z0rRgpOXMGBAR1cXPg" rel="nofollow noopener">Alex's Dry Cleaning Valet</a> on 
+                            <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
+                            <script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript" >  </script></span>
                     </div>
+                    
                 </div>
             </div>
+            <a id="ourstory"></a>
+
             <div class="right_text">
                 <div class="right_text_inner">
                     <div class="text_3d">
+
                         <div class="l_title">
                             <img src="img/icon/title-icon.png" alt="">
-                            <h6>Discover the features</h6>
-                            <h2>We don’t hide, we stand tall in front of chalenge</h2>
+                            <h6>Get to know us</h6>
+                            <h2>Our Business's Story</h2>
                         </div>
-                        <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra a eget nisi. Aenean pellentesque elit vitae eros dignissim ultrices. </p>
+                        <p>Every business has a story that makes it resonate with customers - this is ours. <br />Started from a garage in Silicon Valley, Custom websites began as a marketing contractor, creating visual and audio content for small businesses and large tech companies around the Bay. After working for a large software corporation in-house, we set off into the unknown realm of website design and delivery to help small businesses everywhere. </p>
                     </div>
-                    <div class="shap_mobile">
-                        <img src="img/iphone4.png" alt="">
+                    <div class="shap_mobile" style="padding-right:10px">
+                        <img src="img/ggbridge.jpg" alt="" style=" -webkit-box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11);
+                            box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11); ">
                     </div>
                 </div>
             </div>
         </section>
         <!--================End The best slider Area =================-->
         
+        <a id="pricing"></a>
         <!--================Team People Area =================-->
         <section class="team_people_area">
             <div class="container-fluid">
@@ -393,16 +486,16 @@
                         <div class="team_people_text">
                             <div class="l_title">
                                 <img src="img/icon/title-icon.png" alt="">
-                                <h6>Discover the features</h6>
-                                <h2>We build a strong team of great people</h2>
+                                <h6>Starting at $300</h6>
+                                <h2>Affordable Pricing</h2>
                             </div>
-                            <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. Nam convallis vel erat id dictum. Sed ut risus in orci convallis viverra.</p>
+                            <p>Most modern websites either cost $1000+ to make or are easy to make using website builders, but take way too much time. By creating a website for you, based off of a custom version of this website, we can charge you a low price while still giving you a beautiful website. <br /><br />Base Price will get you:</p>
                             <ul>
-                                <li><a href="#">Nunc nec maximus dui, </a></li>
-                                <li><a href="#">Aenean pellentesque elit vitae</a></li>
-                                <li><a href="#">Aenean pellentesque elit vitae</a></li>
-                                <li><a href="#">Ex mauris, ornare eget pretium </a></li>
-                                <li><a href="#">Cras ex mauris, ornare eget preti</a></li>
+                                <li><a href="#">A customized website</a></li>
+                                <li><a href="#">Fonts, Colors, Photos, Text, all to your liking</a></li>
+                                <li><a href="#">A responsive website that looks beautiful on mobile, tablets, and desktops</a></li>
+                                <li><a href="#">A .tk or .ga domain name for 1 year</a></li>
+                                <li><a href="#">Secure HTTPS encryption</a></li>
                             </ul>
                         </div>
                     </div>
@@ -436,7 +529,7 @@
             </div>
         </section>
         <!--================End Team People Area =================-->
-        
+        <a id="contact"></a>
         <!--================Get in Touch Area =================-->
         <section class="get_in_touch_area">
             <div class="container">
@@ -461,15 +554,17 @@
                         </form>
                     </div>
                     <div class="col-lg-6">
+                        
                         <div class="touch_details">
                             <div class="l_title">
                                 <img src="img/icon/title-icon.png" alt="">
-                                <h6>Say hello</h6>
-                                <h2>Get in touch, send us an e-mail or call us</h2>
+                                <h6>Say hello!</h6>
+                                <h2>Send us an e-mail or call us</h2>
                             </div>
-                            <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
-                            <a href="#"><h5>Call us now</h5></a>
-                            <a href="#"><h4>+452373 95593 232</h4></a>
+                            <p>Text messaging and email is preferred due to bots sending us spam phone calls.</p>
+                            <a href="#"><h5>Contact us now:</h5></a>
+                            <a href="#"><h4>+(510) 413-8304</h4></a>
+                            <a href="#"><h4 style="word-wrap: break-word;">calvinmkim@sbcglobal.net</h4></a>
                         </div>
                     </div>
                 </div>
@@ -478,15 +573,13 @@
         <!--================End Get in Touch Area =================-->
         
         <!--================Map Area =================-->
+        
         <section class="world_map_area p_100">
             <div class="container">
+
                 <div class="world_map_inner">
-                    <img class="img-fluid" src="img/world-map.png" alt="">
-                    <div class="bd-callout">
-                        <h3>Gibraltar Office</h3>
-                        <p>Casemates Square, no253 <br /> United kingdom</p>
-                        <h4><a href="#">+453678 9283 559</a> <a href="#">contact@template.com</a></h4>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101430.10985020603!2d-122.09416097844999!3d37.39714079462365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb645a9d05d3b%3A0x768dfb26dd7cc3a2!2sSunnyvale%2C+CA!5e0!3m2!1sen!2sus!4v1548114518171" width="600" height="450" frameborder="0" style="border:0; width:100%" allowfullscreen></iframe>
+                    
                 </div>
             </div>
         </section>
@@ -499,8 +592,8 @@
                     <div class="row footer_widget_inner">
                         <div class="col-lg-4 col-sm-6">
                             <aside class="f_widget f_about_widget">
-                                <img src="img/footer-logo.png" alt="">
-                                <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
+                                <img src="img/logo.png" alt="">
+                                <p>I forgot to mention, you can add your instagram or even collect emails for a subscriber list using this footer here!</p>
                             </aside>
                         </div>
                         <div class="col-lg-4 col-sm-6">
@@ -528,7 +621,7 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Your e-mail address here" aria-label="Your e-mail address here">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
+                                        <button class="btn btn-secondary submit_btn" type="button" style="width:200px">Subscribe</button>
                                     </span>
                                 </div>
                             </aside>
@@ -540,7 +633,7 @@
                 <div class="container">
                     <div class="float-sm-left">
                         <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Calvin Kim</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
                     </div>
                     <div class="float-sm-right">
@@ -585,5 +678,106 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="js/smoothscroll.js"></script>
         
         <script src="js/theme.js"></script>
+
+        <!-- Smooth Scrolling added by calvin -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+        });
+        });
+        </script>
+
+
+        <!-- HTML IMPORTER AJAX SCRIPT -->
+
+        <script>
+            function HTMLImporter() {}
+
+            HTMLImporter.import = function(url) {
+
+              var error, http_request, load, script;
+
+              script = document.currentScript || document.scripts[document.scripts.length - 1];
+
+              load = function(event) {
+
+                var attribute, index, index1, new_script, old_script, scripts, wrapper;
+
+                wrapper = document.createElement("div");
+                wrapper.innerHTML = this.responseText;
+
+                scripts = wrapper.getElementsByTagName("SCRIPT");
+
+                for (index = scripts.length - 1; index > -1; -- index) {
+
+                  old_script = scripts[index];
+
+                  new_script = document.createElement("script");
+                  new_script.innerHTML = old_script.innerHTML;
+
+                  for (index1 = old_script.attributes.length - 1; index1 > -1; -- index1) {
+
+                    attribute = old_script.attributes[index1];
+                    new_script.setAttribute(attribute.name, attribute.value);
+
+                  }
+
+                  old_script.parentNode.replaceChild(new_script, old_script);
+
+                }
+
+                while(wrapper.firstChild) {
+
+                  script.parentNode.insertBefore(wrapper.removeChild(wrapper.firstChild), script);
+
+                }
+
+                script.parentNode.removeChild(script);
+
+                this.removeEventListener("error", error);
+                this.removeEventListener("load", load);
+
+              };
+
+              error = function(event) {
+
+                this.removeEventListener("error", error);
+                this.removeEventListener("load", load);
+
+                alert("there was an error!");
+
+              };
+
+              http_request = new XMLHttpRequest();
+              http_request.addEventListener("error", error);
+              http_request.addEventListener("load", load);
+              http_request.open("GET", url);
+              http_request.send();
+
+            };
+        </script>
+
     </body>
 </html>
