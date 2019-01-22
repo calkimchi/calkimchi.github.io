@@ -36,9 +36,9 @@
     </head>
     <body>
 
-
+<!-- 
         <script>HTMLImporter.import("my-template.html");</script>
-        
+         -->
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -49,18 +49,20 @@
                     <span></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="overflow-y:hidden">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="">
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="#index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contentcards">Content Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contentcards">Cards</a></li>
                         <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#ourstory">Our Story</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ourstory">Story</a></li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pricing">Pricing</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="visibility:hidden;">
                              <!-- Couldn't get rid of this submenu element, otherwise, toggle menu wouldn't work, so I just hid it -Calvin -->
                             </ul>
                         </li>
+                        <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+                        
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -282,7 +284,7 @@
                                 data-type="text" 
                                 data-responsive_offset="on" 
                                 data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Your Text Here!</a>
+                                <a class="more_btn" href="#pricing">Skip to pricing</a>
                             </div>
                             <div class="tp-caption tp-resizeme single_img" 
                             data-x="['right','right','right','right','right','right']" 
@@ -315,14 +317,18 @@
 
                     </li>
 
-                     
+                                        
                 </ul>
 
-
-            
-                            
+            </div>            
         </section>
         <!--================End Slider Area =================-->
+
+        <!-- Youtube -->    
+                        
+
+        
+
         <!-- 
         </div>
 
@@ -466,7 +472,7 @@
                             <h6>Get to know us</h6>
                             <h2>Our Business's Story</h2>
                         </div>
-                        <p>Every business has a story that makes it resonate with customers - this is ours. <br />Started from a garage in Silicon Valley, Custom websites began as a marketing contractor, creating visual and audio content for small businesses and large tech companies around the Bay. After working for a large software corporation in-house, we set off into the unknown realm of website design and delivery to help small businesses everywhere. </p>
+                        <p>Every business has a story that makes it resonate with their customers - this is ours. <br />Starting from a garage in Silicon Valley, Custom websites began as a marketing contractor creating visual and audio content for small businesses and large tech companies around the Bay. After working for a large software corporation in-house, we set off into the unknown realm of website design and delivery to help small businesses everywhere. </p>
                     </div>
                     <div class="shap_mobile" style="padding-right:10px">
                         <img src="img/ggbridge.jpg" alt="" style=" -webkit-box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11);
@@ -489,7 +495,7 @@
                                 <h6>Starting at $300</h6>
                                 <h2>Affordable Pricing</h2>
                             </div>
-                            <p>Most modern websites either cost $1000+ to make or are easy to make using website builders, but take way too much time. By creating a website for you, based off of a custom version of this website, we can charge you a low price while still giving you a beautiful website. <br /><br />Base Price will get you:</p>
+                            <p>Most modern websites either cost you over $1000 or are easy to make with website builders, but take way too much time. By having us create a website for you, based off of a template, we can charge you a low price while still giving you a beautiful website. <br /><br />Base Price will get you:</p>
                             <ul>
                                 <li><a href="#">A customized website</a></li>
                                 <li><a href="#">Fonts, Colors, Photos, Text, all to your liking</a></li>
@@ -529,6 +535,76 @@
             </div>
         </section>
         <!--================End Team People Area =================-->
+
+        <!-- Videos -->
+        <a id="multimedia"></a>
+
+        <section class="feature_area" id="contentcards" style="">
+            <div class="" style="margin:0px 0px 0px 0px; padding: 0px 0px 0px 0px; width:100%; ">
+                <div class="c_title" style="width:100%">
+                    <img src="img/icon/title-icon.png" alt="">
+                    <h6>We also create professional</h6>
+                    <h2>Videos and Photos!</h2>
+                </div>
+                <div class="video_content center" style="">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/U-I2VNE-e1w?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Photography -->
+        
+
+        <section class="portfolio_area">
+            <div class="container">
+                <div class="portfolio_filter">
+                    <ul>
+                        <li class="active" data-filter="*"><a href="">All</a></li>
+                        <li data-filter=".brand"><a href="#photos">Brands</a></li>
+                        <li data-filter=".people"><a href="#photos">People</a></li>
+                        <li data-filter=".food"><a href="#photos">Food</a></li>
+                        <li data-filter=".scenes"><a href="#photos">Scenes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ms_portfolio_inner">
+                <div class="ms_p_item wd_50 food">
+                    <!-- Kasa food bowl -->
+                    <img src="https://drscdn.500px.org/photo/151012177/q%3D80_m%3D1500/v2?webp=true&sig=c7e95d7f0aec8d5a127e2e9dbbb78e12dc23ff3e59407be5cae25e6160498336" alt="">
+                </div>
+                <div class="ms_p_item wd_50 brand">
+                    <img src="https://drscdn.500px.org/photo/76350209/q%3D80_m%3D1500/v2?webp=true&sig=25e5125f5b843ab1cb8ca4037b6f045ec3c35b6c1a51b92e6eed3dbb1eb76b33" alt="">
+                </div>
+                <div class="ms_p_item wd_50 people">
+                    <img src="https://drscdn.500px.org/photo/280449677/q%3D80_m%3D1000/v2?webp=true&sig=704a338b9c76e35803f04e3b2b598f554c45fb4da64f8bad6912ce61d55ec91e" alt="">
+                </div>
+                <div class="ms_p_item wd_50 people">
+                    <img src="https://drscdn.500px.org/photo/218131525/q%3D80_m%3D1000/v2?webp=true&sig=2481a9b6092f0540286b49a94d4b0a675f8b8f083f00ce3d695b177ce1f3fd5e" alt="">
+                </div>
+                <div class="ms_p_item wd_50 scenes">
+                    <img src="https://drscdn.500px.org/photo/250390693/q%3D80_m%3D1500/v2?webp=true&sig=6b2ce25f16a58e2d1d5a9e426d4188caa74c8f7464a3df10897643e1a38e4e24" alt="">
+                </div>
+                
+                <div class="ms_p_item wd_50 people brand">
+                    <img src="https://drscdn.500px.org/photo/160784585/q%3D80_m%3D1500/v2?webp=true&sig=e39971956de6eb3330d41205b2f0cec6673b845e3be9aab24a018830a36f8378" alt="">
+                </div>
+                <div class="ms_p_item wd_50 scenes">
+                    <img src="https://drscdn.500px.org/photo/122885799/q%3D80_m%3D1500/v2?webp=true&sig=e7eb14df6412dea3535b71c0a8d74e34d519503e9e8d9fd2ec410e074e450cd0" alt="">
+                </div>
+                <div class="ms_p_item wd_50 food">
+                    <img src="https://drscdn.500px.org/photo/122885773/q%3D80_m%3D1500/v2?webp=true&sig=d9f9065310ee6a15aaf9b9515a5dd55da1d796adf33ce80f4b8f57c5063a845a" alt="">
+                </div>
+                <div class="ms_p_item wd_50 food">
+                    <img src="https://drscdn.500px.org/photo/76358161/q%3D80_m%3D1000/v2?webp=true&sig=3ae91ef2cecafd9b23b7e0d666b676c5e426644c016955d8dbc985e5d60f1743" alt="">
+                </div>
+                <div class="ms_p_item wd_50 scene">
+                    <img src="https://drscdn.500px.org/photo/76350211/q%3D80_m%3D1500/v2?webp=true&sig=f4e13e8375fc756e2d303185918759c24af8201866c79d13f9e603b29fb39d1d" alt="">
+                </div>
+            </div>
+        </section>
+
+
         <a id="contact"></a>
         <!--================Get in Touch Area =================-->
         <section class="get_in_touch_area">
@@ -556,15 +632,15 @@
                     <div class="col-lg-6">
                         
                         <div class="touch_details">
-                            <div class="l_title">
+                            <div class="l_title" >
                                 <img src="img/icon/title-icon.png" alt="">
                                 <h6>Say hello!</h6>
                                 <h2>Send us an e-mail or call us</h2>
                             </div>
                             <p>Text messaging and email is preferred due to bots sending us spam phone calls.</p>
-                            <a href="#"><h5>Contact us now:</h5></a>
-                            <a href="tel:510-413-8304"><h4 >(510) 413-8304</h4></a>
-                            <a href="mailto:calvinmkim@sbcglobal.net"><h4  style="word-wrap: break-word;">calvinmkim@sbcglobal.net</h4></a>
+                            <a><h5 style="color:black">Contact us now:</h5></a>
+                            <a href="tel:510-413-8304" ><h4 style="color:#97ccfe">(510) 413-8304</h4></a>
+                            <a href="mailto:calvinmkim@sbcglobal.net"><h4  style="word-wrap: break-word; color:#97ccfe">calvinmkim@sbcglobal.net</h4></a>
                         </div>
                     </div>
                 </div>
@@ -601,8 +677,8 @@
                                 <div class="f_title">
                                     <h3>Instagram</h3>
                                 </div>
-                                <ul>
-                                    <li><a href="#"><img src="img/instagram/ins-1.jpg" alt=""></a></li>
+                                <ul >
+                                    <li><a href="#"><img src="img/instagram/ins-1.jpg"  alt=""></a></li>
                                     <li><a href="#"><img src="img/instagram/ins-2.jpg" alt=""></a></li>
                                     <li><a href="#"><img src="img/instagram/ins-3.jpg" alt=""></a></li>
                                     <li><a href="#"><img src="img/instagram/ins-4.jpg" alt=""></a></li>
@@ -631,20 +707,20 @@
             </div>
             <div class="footer_copyright">
                 <div class="container">
+                    <div class="float-sm-right"  style="color:white">
+                        <ul>
+                            <li><a href="#" style="color:white"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#" style="color:white"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" style="color:white"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" style="color:white"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#" style="color:white"><i class="fa fa-behance"></i></a></li>
+                            <li><a href="#" style="color:white"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
                     <div class="float-sm-left">
                         <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Calvin Kim</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="https://colorlib.com" target="_blank" style="color:#2a2f56">All rights reserved | Made by </a><a style="color:white">Calvin Kim</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
-                    </div>
-                    <div class="float-sm-right">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -677,6 +753,15 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
         <script src="js/smoothscroll.js"></script>
         
+
+        <!-- From Portfolio html. Added by Calvin -->
+
+        <!-- <script src="vendors/circle-bar/circle-progress.min.js"></script>
+        <script src="vendors/circle-bar/plugins.js"></script> -->
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
+        
+        <script src="js/circle-active.js"></script>
         <script src="js/theme.js"></script>
 
         <!-- Smooth Scrolling added by calvin -->
