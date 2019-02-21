@@ -1,3 +1,18 @@
+<!-- 
+
+Important:
+Question: Are we able to swipe down the article on mobile?
+Question: will we accidentally click to next article?
+Can we save state of 
+
+Nice to haves:
+Swiping left/right to next article
+Lazy loading for articles so you don't load all at once - important for scale
+
+
+ -->
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,12 +22,10 @@
         
         <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Sierra</title>
+        <title>Calvin Kim</title>
 
         <!-- Icon css link -->
-        <!-- <link href="css/font-awesome.min.css" rel="stylesheet">
-         -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         
@@ -23,6 +36,8 @@
         
         <!-- Extra plugin css -->
         <link href="vendors/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+        <link href="vendors/magnify-popup/magnific-popup.css" rel="stylesheet">
+        
         
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
@@ -35,35 +50,39 @@
         <![endif]-->
     </head>
     <body>
-
-<!-- 
-        <script>HTMLImporter.import("my-template.html");</script>
-         -->
+        
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
-                <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" style="visibility: hidden; "></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent"  style="">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="#index">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contentcards">Cards</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#ourstory">Story</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#pricing">Pricing</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="visibility:hidden;">
-                             <!-- Couldn't get rid of this submenu element, otherwise, toggle menu wouldn't work, so I just hid it -Calvin -->
+                        <li class="nav-item active"><a class="nav-link" href="index.html#index">Home</a></li>
+                        <li class="nav-item dropdown submenu">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><a class="nav-link" href="blog.html">Technology</a></li>
+                                
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
-                        
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item dropdown submenu">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio (in construction)</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><a class="nav-link" >Webdev</a></li>
+                                <li class="nav-item"><a class="nav-link" >Data</a></li>
+                                <li class="nav-item"><a class="nav-link" >Video</a></li>
+                                <li class="nav-item"><a class="nav-link" >Photo</a></li>
+                                <li class="nav-item"><a class="nav-link" >Music</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -71,662 +90,93 @@
         <!--================End Header Menu Area =================-->
         
         
-        <!--================Slider Area =================-->
 
-        <!-- INDEX ANCHOR LINK -->
-        <a id="index"></a>
-
-
-        <section class="main_slider_area loading" style="">
-
-            
-
-            <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
-
-
-                <ul>
-                    <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                        <!-- LAYER NR. 1 -->
-                        <div class="slider_text_box">
-                            <div class="tp-caption tp-resizeme first_text" 
-                            data-x="['left','left','left','left','15','center']" 
-                            data-hoffset="['0','80','80','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['150','150','150','150','100','180']" 
-                            data-fontsize="['72','72','72','50','50','30']"
-                            data-lineheight="['82','82','82','62','62','42']"
-                            data-width="['none']"
-                            data-height="none"
-                            data-whitespace="nowrape"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">Customize a modern  <br />website design </div>
-                            
-                            <div class="tp-caption tp-resizeme secand_text" 
-                                data-x="['left','left','left','left','15','center']" 
-                                data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['350','350','340','280','250','270']"  
-                                data-fontsize="['24','24','24','18','16','16']"
-                                data-lineheight="['36','36','36','26','26','26']"
-                                data-width="['none','none','none','none','none']"
-                                data-height="none"
-                                data-whitespace="nowrape"
-                                data-type="text" 
-                                data-responsive_offset="on"
-                                data-transform_idle="o:1;"
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left','left','center']">Just the way you wanted!
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                data-x="['left','left','left','left','15','center']" data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['670','670','670','480','370','350']" 
-                                data-fontsize="['14','14','14','14']"
-                                data-lineheight="['46','46','46','46']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Button</a>
-                            </div>
-                            <div class="tp-caption tp-resizeme single_img" 
-                            data-x="['right','right','right','right','right','right']" 
-                            data-hoffset="['0','0','0','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['180','180','180','180','0']" 
-                            data-fontsize="['65','65','60','40','25']"
-                            data-lineheight="['75','75','75','50','35']"
-                            data-width="['485','485','485','485','485']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">
-                                <img src="img/home-slider/slider-m-1.png" alt="">
-                            </div>
-                        </div>
-
-                        <!-- LIST OPTION 1 BACKGROUND IMAGE -->
-                       
-
-                            <img class="btn-group-toggle" src="img/home-slider/slider-bg-1.jpg" id="option1" alt="">
-                            <!-- Grey overlay -->
-                            <div class="img-overlay"></div>
-                    </li>
-                    <li data-index="rs-1588" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- LAYERS -->
-                        <!-- LAYERS -->
-
-                        <!-- LAYER NR. 1 -->
-                        <div class="slider_text_box">
-                            <div class="tp-caption tp-resizeme first_text" 
-                            data-x="['left','left','left','left','15','center']" 
-                            data-hoffset="['0','80','80','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['150','150','150','150','100','180']" 
-                            data-fontsize="['72','72','72','50','50','30']"
-                            data-lineheight="['82','82','82','62','62','42']"
-                            data-width="['none']"
-                            data-height="none"
-                            data-whitespace="nowrape"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">Responsive and <br />Clean </div>
-                            
-                            <div class="tp-caption tp-resizeme secand_text" 
-                                data-x="['left','left','left','left','15','center']" 
-                                data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['350','350','340','280','250','270']"
-                                data-fontsize="['24','24','24','18','16','16']"
-                                data-lineheight="['36','36','36','26','26','26']"
-                                data-width="['none','none','none','none','none']"
-                                data-height="none"
-                                data-whitespace="nowrape"
-                                data-type="text" 
-                                data-responsive_offset="on"
-                                data-transform_idle="o:1;"
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left','left','center']">On mobile, tablets, and desktops.
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                data-x="['left','left','left','left','15','center']" data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['670','670','670','480','370','350']" 
-                                data-fontsize="['14','14','14','14']"
-                                data-lineheight="['46','46','46','46']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#">Button</a>
-                            </div>
-                            <div class="tp-caption tp-resizeme single_img" 
-                            data-x="['right','right','right','right','right','right']" 
-                            data-hoffset="['0','0','0','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['180','180','180','180','0']" 
-                            data-fontsize="['65','65','60','40','25']"
-                            data-lineheight="['75','75','75','50','35']"
-                            data-width="['485','485','485','485','485']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">
-                                <img src="img/home-slider/slider-m-1.png" alt="">
-                            </div>
-                        </div>
-
-                        <!-- LIST OPTION 2 BACKGROUND IMAGE -->
-                         <img class="btn-group-toggle" src="img/home-slider/slider-bg-2.jpg" id="option2" alt="">
-                         <div class="img-overlay"></div>
-
-                    </li>
-                    <li data-index="rs-1589" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Creative" data-param1="01" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                    <!-- LAYERS -->
-                        <!-- LAYERS -->
-
-                        <!-- LAYER NR. 1 -->
-                        <div class="slider_text_box">
-                            <div class="tp-caption tp-resizeme first_text" 
-                            data-x="['left','left','left','left','15','center']" 
-                            data-hoffset="['0','80','80','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['150','150','150','150','100','180']" 
-                            data-fontsize="['72','72','72','50','50','30']"
-                            data-lineheight="['82','82','82','62','62','42']"
-                            data-width="['none']"
-                            data-height="none"
-                            data-whitespace="nowrape"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">Use the menu bar <br />to scroll down</div>
-                            
-                            <div class="tp-caption tp-resizeme secand_text" 
-                                data-x="['left','left','left','left','15','center']" 
-                                data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['350','350','340','280','250','270']"  
-                                data-fontsize="['24','24','24','18','16','16']"
-                                data-lineheight="['36','36','36','26','26','26']"
-                                data-width="['none','none','none','none','none']"
-                                data-height="none"
-                                data-whitespace="nowrape"
-                                data-type="text" 
-                                data-responsive_offset="on"
-                                data-transform_idle="o:1;"
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                                data-textAlign="['left','left','left','left','left','center']">Everything is on one page!
-                            </div>
-                            
-                            <div class="tp-caption tp-resizeme" 
-                                data-x="['left','left','left','left','15','center']" data-hoffset="['0','80','80','0']" 
-                                data-y="['top','top','top','top']" 
-                                data-voffset="['670','670','670','480','370','350']" 
-                                data-fontsize="['14','14','14','14']"
-                                data-lineheight="['46','46','46','46']"
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-type="text" 
-                                data-responsive_offset="on" 
-                                data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                                <a class="more_btn" href="#pricing">Skip to pricing</a>
-                            </div>
-                            <div class="tp-caption tp-resizeme single_img" 
-                            data-x="['right','right','right','right','right','right']" 
-                            data-hoffset="['0','0','0','0']" 
-                            data-y="['top','top','top','top']" 
-                            data-voffset="['180','180','180','180','0']" 
-                            data-fontsize="['65','65','60','40','25']"
-                            data-lineheight="['75','75','75','50','35']"
-                            data-width="['485','485','485','485','485']"
-                            data-height="none"
-                            data-whitespace="normal"
-                            data-type="text" 
-                            data-responsive_offset="on" 
-                            data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:0px;s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]"
-                            data-textAlign="['left','left','left','left','left','center']">
-                                
-                               <img src="img/home-slider/slider-m-1.png" alt="">
-                               
-                            </div>
-                                
-                            
-
-                        </div>
-                               
-                       <!-- LIST OPTION 3 BACKGROUND IMAGE -->
-
-                        <img class="btn-group-toggle" src="img/home-slider/slider-bg-3.jpg" alt="">
-
-                        <div class="img-overlay"></div>
-
-                    </li>
-
-                                        
-                </ul>
-
-            </div>            
+        <!--================Banner Area =================-->
+        
+        <section class="banner_area" style="height:10vh;">  
+        <div class="grey-overlay"></div>  
+            <div class="container" style="height:10vh;">
+                <div class="banner_inner_text" style="padding-top:2.5vh">
+                    <h2 style="font-size:5vh">Technology Blog</h2>
+                </div>
+            </div>
         </section>
-        <!--================End Slider Area =================-->
-
-        <!-- Youtube -->    
-                        
-
+        <!--================End Banner Area =================-->
+        
         
 
-        <!-- 
-        </div>
+        <!--================Blog Main Area =================-->
+        <section style="height: 80vh">
+            <div class="background_area"></div>
+            <div id="article" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Data-interval: true means it auto transitions between images -->
+      <!-- Indicators -->
+              <ol class="carousel-indicators" disabled="true">
+                <li data-target="#article-1" class="active" style="color:black">0</li>
+                <li data-target="#article-2" style="color:black"></li>
+                <li data-target="#article-3" style="color:black"></li>
+                <li data-target="#article-4" style="color:black"></li>
+                <li data-target="#article-5" style="color:black"></li>
 
-                <div class="btn-group btn-group-toggle" data-toggle="buttons" style="">
+              </ol>
 
-              <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> 1
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> 2
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option3" autocomplete="off"> 3
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option4" autocomplete="off"> 4
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option4" autocomplete="off"> 5
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option5" autocomplete="off"> 6
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option6" autocomplete="off"> 7
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option7" autocomplete="off"> 8
-              </label>
-            </div>
- -->
-        <!--================Feature Area =================-->
-        <section class="feature_area" id="contentcards">
-            <div class="container">
-                <div class="c_title">
-                    <img src="img/icon/title-icon.png" alt="">
-                    <h6>Get creative with</h6>
-                    <h2>Cool Content Cards!</h2>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" >
+              <div class="box-shadow-inset-overlay" ></div>  
+                <div class="carousel-item active" > <!-- article 1 -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vRSyc6Im26vr6H35b8C61K4W4qCxtMDZej90jXh2AuC9tO6zgMizXU-oBw1Iut-lAPDcbZDRs9WiAh3/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
                 </div>
-                <div class="row feature_inner">
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <div class="f_icon">
-                                <img src="img/icon/f-icon-1-2.jpg" alt="">
-                            </div>
-                            <h4>Blog Post 1</h4>
-                            <p>Maybe each card could link to your most recent blogs.</p>
-                            <a class="more_btn" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <div class="f_icon">
-                                <img src="img/icon/f-icon-2-2.jpg" style="box-shadow: 5px 5px;" alt="">
-                            </div>
-                            <h4>Signature Dish</h4>
-                            <p>Or maybe you're a restaraunt and you want to showcase your best dishes. </p>
-                            <a class="more_btn" href="#">More Details</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <div class="f_icon">
-                                <img src="img/icon/f-icon-3-2.jpg" alt="">
-                            </div>
-                            <h4>Product 1</h4>
-                            <p>Maybe you're a tech company, selling multiple products. Each card could be a product.</p>
-                            <a class="more_btn" href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <div class="feature_item">
-                            <div class="f_icon" >
-                                <img src="img/icon/f-icon-4-2.png" style="border-radius: 50px; box-shadow: 5px 3px #888888;" alt="">
-                            </div>
-                           
-                            <h4>Team Member 1</h4>
-                            <p>Maybe you're a startup company and each team member has a bio, blog, or page that links to their content.</p>
-                            <a class="more_btn" href="#">Biography</a>
 
-                        </div>
-                    </div>
+                <div class="carousel-item" > <!-- Amazon go -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vQJRwZRsescsY6N1X5947zCOrj55r78cVxPWEhrXLTkrPSWmnI2fcTR-tsN3X9HvnrrMNESbdBo6f9A/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
                 </div>
-                
-            </div>
+
+                <div class="carousel-item" > <!-- Article 3 -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vQfE1F0RUjFM1vuNuRGpZ-PBKTAZ_PBSxeSSrFRKo_SwkgWk5EtbwkbmkCMc_zzUQgfOUyTKwv9X6mK/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item" > <!-- article 4 -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vRqmIZcxnA3IgKAXW54cb0foq1YeE5CxsKQMlSmx6drz7sXj34keKhKCKX-XUh1iVcKkLFPCmsi7LbT/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item" >
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vSWbUcDyYZtFqcsT5LG_rdwGE2LJb9KJpSCYet97APZfqCfGNOw9fYk0qMvGzblA3S21duUAXFqGKmh/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item">
+                  <img src="img/home-slider/slider-bg-3.jpg" alt="New York" style="width:100%; height:80vh">
+                  <div class="carousel-caption">
+                    <h3>Final slide</h3>
+                    <p>Thanks for reading! Hope to get you more content soon.</p>
+                  </div>
+                </div>
+              </div>
+
+             
+          </div>
         </section>
-        <!--================End Feature Area =================-->
-
-        
-        <!--================The best slider Area =================-->
-        <section class="testimonialspace" id="testimonials">
-            <div style="height:50px"></div>
-        </section>
-        <section class="best_3d_area" >
-            <div class="left_3d">
-
-                <div class="shap_slider_inner owl-carousel" >
-
-                    <div class="item">
-                        <h4>“This could be a testimonial quote from your best customer”</h4>
-                        <p>Testimonials from your customers always show your reliability and experience as a business. Swipe right to see more!</p>
-                        <div class="media">
-                            <img src="img/team/people/people-5.jpg" alt="">
-                            <div class="media-body">
-                                <h5>Best Customer</h5>
-                                <h6>CEO Enterprise</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <h4>"Food was great, customer service was amazing, and the restaraunt was clean. 5/5 on Yelp!”</h4>
-                        <p>From the moment that I entered, to the second that I sat down in this restaraunt, I had the greatest experience of my life. The lighting hit off the side of my date's face perfectly as he fed me a piece of juicy chicken.</p>
-                        <div class="media">
-                            <img src="img/team/people/girl-happy.jpg" alt="">
-                            <div class="media-body">
-                                <h5>Janelle K.</h5>
-                                <h6>Yelp Elite</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item" style="">
-                        <h4 >In fact, Why not just directly embed actual Yelp reviews?</h4>
-                        <span class="yelp-review" data-review-id="8POCR8O6NX9Czdis2JUs5Q" data-hostname="www.yelp.com" style="">Read 
-                            <a href="https://www.yelp.com/user_details?userid=lvCmlo9iFFlyRu48rKvJcA" rel="nofollow noopener">Shaina S.</a>'s 
-                            <a href="https://www.yelp.com/biz/alexs-dry-cleaning-valet-palo-alto?hrid=8POCR8O6NX9Czdis2JUs5Q" rel="nofollow noopener">review</a> of 
-                            <a href="https://www.yelp.com/biz/Iaa0Z0rRgpOXMGBAR1cXPg" rel="nofollow noopener">Alex's Dry Cleaning Valet</a> on 
-                            <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-                            <script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript" >  </script></span>
-                    </div>
-                    
-                </div>
-            </div>
-            <a id="ourstory"></a>
-
-            <div class="right_text">
-                <div class="right_text_inner">
-                    <div class="text_3d">
-
-                        <div class="l_title">
-                            <img src="img/icon/title-icon.png" alt="">
-                            <h6>Get to know us</h6>
-                            <h2>Our Business's Story</h2>
-                        </div>
-                        <p>Every business has a story that makes it resonate with their customers - this is ours. <br />Starting from a garage in Silicon Valley, Custom websites began as a marketing contractor creating visual and audio content for small businesses and large tech companies around the Bay. After working for a large software corporation in-house, we set off into the unknown realm of website design and delivery to help small businesses everywhere. </p>
-                    </div>
-                    <div class="shap_mobile" style="padding-right:10px">
-                        <img src="img/ggbridge.jpg" alt="" style=" -webkit-box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11);
-                            box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.11); ">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End The best slider Area =================-->
-        
-        <a id="pricing"></a>
-        <!--================Team People Area =================-->
-        <section class="team_people_area">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="team_people_text">
-                            <div class="l_title">
-                                <img src="img/icon/title-icon.png" alt="">
-                                <h6>Starting at $300</h6>
-                                <h2>Affordable Pricing</h2>
-                            </div>
-                            <p>Most modern websites either cost you over $1000 or are easy to make with website builders, but take way too much time. By having us create a website for you, based off of a template, we can charge you a low price while still giving you a beautiful website. <br /><br />Base Price will get you:</p>
-                            <ul>
-                                <li><a href="#">A customized website</a></li>
-                                <li><a href="#">Fonts, Colors, Photos, Text, all to your liking</a></li>
-                                <li><a href="#">A responsive website that looks beautiful on mobile, tablets, and desktops</a></li>
-                                <li><a href="#">A .tk or .ga domain name for 1 year</a></li>
-                                <li><a href="#">Secure HTTPS encryption</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="team_img_inner">
-                            <div class="row">
-                                <div class="col-lg-6 col-6">
-                                    <div class="team_img_item">
-                                        <img src="img/team/people/people-1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-6">
-                                    <div class="team_img_item">
-                                        <img src="img/team/people/people-2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-6">
-                                    <div class="team_img_item">
-                                        <img src="img/team/people/people-3.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-6">
-                                    <div class="team_img_item">
-                                        <img src="img/team/people/people-4.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End Team People Area =================-->
-
-        <!-- Videos -->
-        <a id="multimedia"></a>
-
-        <section class="feature_area" id="contentcards" style="">
-            <div class="" style="margin:0px 0px 0px 0px; padding: 0px 0px 0px 0px; width:100%; ">
-                <div class="c_title" style="width:100%">
-                    <img src="img/icon/title-icon.png" alt="">
-                    <h6>We also create professional</h6>
-                    <h2>Videos and Photos!</h2>
-                </div>
-                <div class="video_content center" style="">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/U-I2VNE-e1w?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                
-            </div>
-        </section>
-
-        <!-- Photography -->
-        
-
-        <section class="portfolio_area">
-            <div class="container">
-                <div class="portfolio_filter">
-                    <ul>
-                        <li class="active" data-filter="*"><a href="">All</a></li>
-                        <li data-filter=".brand"><a href="#photos">Brands</a></li>
-                        <li data-filter=".people"><a href="#photos">People</a></li>
-                        <li data-filter=".food"><a href="#photos">Food</a></li>
-                        <li data-filter=".scenes"><a href="#photos">Scenes</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="ms_portfolio_inner">
-                <div class="ms_p_item wd_50 food">
-                    <!-- Kasa food bowl -->
-                    <img src="https://drscdn.500px.org/photo/151012177/q%3D80_m%3D1500/v2?webp=true&sig=c7e95d7f0aec8d5a127e2e9dbbb78e12dc23ff3e59407be5cae25e6160498336" alt="">
-                </div>
-                <div class="ms_p_item wd_50 brand">
-                    <img src="https://drscdn.500px.org/photo/76350209/q%3D80_m%3D1500/v2?webp=true&sig=25e5125f5b843ab1cb8ca4037b6f045ec3c35b6c1a51b92e6eed3dbb1eb76b33" alt="">
-                </div>
-                <div class="ms_p_item wd_50 people">
-                    <img src="https://drscdn.500px.org/photo/280449677/q%3D80_m%3D1000/v2?webp=true&sig=704a338b9c76e35803f04e3b2b598f554c45fb4da64f8bad6912ce61d55ec91e" alt="">
-                </div>
-                <div class="ms_p_item wd_50 people">
-                    <img src="https://drscdn.500px.org/photo/218131525/q%3D80_m%3D1000/v2?webp=true&sig=2481a9b6092f0540286b49a94d4b0a675f8b8f083f00ce3d695b177ce1f3fd5e" alt="">
-                </div>
-                <div class="ms_p_item wd_50 scenes">
-                    <img src="https://drscdn.500px.org/photo/250390693/q%3D80_m%3D1500/v2?webp=true&sig=6b2ce25f16a58e2d1d5a9e426d4188caa74c8f7464a3df10897643e1a38e4e24" alt="">
-                </div>
-                
-                <div class="ms_p_item wd_50 people brand">
-                    <img src="https://drscdn.500px.org/photo/160784585/q%3D80_m%3D1500/v2?webp=true&sig=e39971956de6eb3330d41205b2f0cec6673b845e3be9aab24a018830a36f8378" alt="">
-                </div>
-                <div class="ms_p_item wd_50 scenes">
-                    <img src="https://drscdn.500px.org/photo/122885799/q%3D80_m%3D1500/v2?webp=true&sig=e7eb14df6412dea3535b71c0a8d74e34d519503e9e8d9fd2ec410e074e450cd0" alt="">
-                </div>
-                <div class="ms_p_item wd_50 food">
-                    <img src="https://drscdn.500px.org/photo/122885773/q%3D80_m%3D1500/v2?webp=true&sig=d9f9065310ee6a15aaf9b9515a5dd55da1d796adf33ce80f4b8f57c5063a845a" alt="">
-                </div>
-                <div class="ms_p_item wd_50 food">
-                    <img src="https://drscdn.500px.org/photo/76358161/q%3D80_m%3D1000/v2?webp=true&sig=3ae91ef2cecafd9b23b7e0d666b676c5e426644c016955d8dbc985e5d60f1743" alt="">
-                </div>
-                <div class="ms_p_item wd_50 scene">
-                    <img src="https://drscdn.500px.org/photo/76350211/q%3D80_m%3D1500/v2?webp=true&sig=f4e13e8375fc756e2d303185918759c24af8201866c79d13f9e603b29fb39d1d" alt="">
-                </div>
-            </div>
-        </section>
-
-
-        <a id="contact"></a>
-        <!--================Get in Touch Area =================-->
-        <section class="get_in_touch_area">
-            <div class="container">
-                <div class="row get_touch_inner">
-                    <!-- <div class="col-lg-6">
-                        <form class="contact_us_form row" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="form-group col-lg-6">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject*">
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group col-lg-12">
-                                <button type="submit" value="submit" class="btn submit_btn form-control">Send</button>
-                            </div>
-                        </form>
-                    </div> -->
-                    <div class="col-lg-6">
-                        
-                        <div class="touch_details">
-                            <div class="l_title" >
-                                <img src="img/icon/title-icon.png" alt="">
-                                <h6>Say hello!</h6>
-                                <h2>Send us an e-mail or call us</h2>
-                            </div>
-                            <p>Text messaging and email is preferred due to bots sending us spam phone calls.</p>
-                            <a><h5 style="color:black">Contact us now:</h5></a>
-                            <a href="tel:510-413-8304" ><h4 style="color:#97ccfe">(510) 413-8304</h4></a>
-                            <a href="mailto:calvinmkim@sbcglobal.net"><h4  style="word-wrap: break-word; color:#97ccfe">calvinmkim@sbcglobal.net</h4></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================End Get in Touch Area =================-->
-        
-        <!--================Map Area =================-->
-        
-        <section class="world_map_area p_100">
-            <div class="container">
-
-                <div class="world_map_inner">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d101430.10985020603!2d-122.09416097844999!3d37.39714079462365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb645a9d05d3b%3A0x768dfb26dd7cc3a2!2sSunnyvale%2C+CA!5e0!3m2!1sen!2sus!4v1548114518171" width="600" height="450" frameborder="0" style="border:0; width:100%" allowfullscreen></iframe>
-                    
-                </div>
-            </div>
-        </section>
-        <!--================End Map Area =================-->
-        
-        <!--================Footer Area =================-->
-        <footer class="footr_area">
-            <div class="footer_widget_area">
-                <div class="container">
-                    <div class="row footer_widget_inner">
-                        <div class="col-lg-4 col-sm-6">
-                            <aside class="f_widget f_about_widget">
-                                <img src="img/logo.png" alt="">
-                                <p>I forgot to mention, you can add your instagram here!</p>
-                            </aside>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <aside class="f_widget f_insta_widget">
-                                <div class="f_title">
-                                    <h3>Instagram</h3>
-                                </div>
-                                <ul >
-                                    <li><a href="#"><img src="img/instagram/ins-1.jpg"  alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-2.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-3.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-4.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-5.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-6.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-7.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-8.jpg" alt=""></a></li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <!-- <aside class="f_widget f_subs_widget">
-                                <div class="f_title">
-                                    <h3>Subscribe to newsletter</h3>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Your e-mail address here" aria-label="Your e-mail address here">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary submit_btn" type="button" style="width:200px; visibility: visible">Not working</button>
-                                    </span>
-                                </div>
-                            </aside> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer_copyright">
-                <div class="container">
-                    <div class="float-sm-right"  style="color:white">
-                        <ul>
-                            <li><a href="#" style="color:white"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#" style="color:white"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" style="color:white"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" style="color:white"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#" style="color:white"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#" style="color:white"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="float-sm-left">
-                        <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a href="https://colorlib.com" target="_blank" style="color:#2a2f56">All rights reserved | Made by </a><a style="color:white">Calvin Kim</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
-                    </div>
-                </div>
-            </div>
-        </footer>
         <!--================End Footer Area =================-->
-        
+        <div class="currentButton">
+            <p class="currentArticleLabel" id="current" style="font-size: 2vh;">Current:</p> 
+            <p class="currentArticle" id="current">0</p> 
+         </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" id="prev" role="button" href="#article" data-slide="prev"  >
+            <div class="previousButton" style="color:black">0</div><!-- Just the text value -->
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color:black"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" id="next" role="button" href="#article" data-slide="next"  >
+            <div class="nextButton" style="color:black">0</div>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color:black"></span>
+            <span class="sr-only">Next</span>
+          </a>
         
         
         
@@ -752,117 +202,218 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> <a hr
         <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
         <script src="vendors/magnify-popup/jquery.magnific-popup.min.js"></script>
         <script src="js/smoothscroll.js"></script>
-        
-
-        <!-- From Portfolio html. Added by Calvin -->
-
-        <!-- <script src="vendors/circle-bar/circle-progress.min.js"></script>
-        <script src="vendors/circle-bar/plugins.js"></script> -->
+        <script src="vendors/circle-bar/circle-progress.min.js"></script>
+        <script src="vendors/circle-bar/plugins.js"></script>
         <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
         <script src="vendors/isotope/isotope.pkgd.min.js"></script>
         
         <script src="js/circle-active.js"></script>
         <script src="js/theme.js"></script>
 
-        <!-- Smooth Scrolling added by calvin -->
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Lazy Loading for carousel not working -->
         <script>
-        $(document).ready(function(){
-        // Add smooth scrolling to all links
-        $("a").on('click', function(event) {
+        /*  document.addEventListener("DOMContentLoaded", function() {
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-
-          // Store hash
-          var hash = this.hash;
-
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
+      if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.srcset = lazyImage.dataset.srcset;
+              lazyImage.classList.remove("lazy");
+              lazyImageObserver.unobserve(lazyImage);
+            }
           });
-        } // End if
         });
+
+        lazyImages.forEach(function(lazyImage) {
+          lazyImageObserver.observe(lazyImage);
         });
+      } else {
+        // Possibly fall back to a more compatible method here
+      }
+    });*/
         </script>
 
-
-        <!-- HTML IMPORTER AJAX SCRIPT -->
-
+        <!-- Counter for blog pages -->
         <script>
-            function HTMLImporter() {}
+        /*Count articles to get number of max articles */
+        var maxNumberOfArticles = $(".carousel-item").length;
+        
+        var currentArticle = 1;
+        var nextArticle = 2; /*currentArticle + 1;*/ /*If current is maxnumber, then nextarticle = 1*/
+        var previousArticle = maxNumberOfArticles; /*currentArticle - 1;*/ /*If current is 1, then previous article = maxnumber*/
 
-            HTMLImporter.import = function(url) {
 
-              var error, http_request, load, script;
 
-              script = document.currentScript || document.scripts[document.scripts.length - 1];
+        /*Set button disabled attributes to false*/
+        document.getElementById('next').setAttribute('disabled', false);
+        document.getElementById('prev').setAttribute('disabled', false);
 
-              load = function(event) {
+        /*initialization of counter values*/   
+        counterVisualUpdate()
 
-                var attribute, index, index1, new_script, old_script, scripts, wrapper;
+            function counterVisualUpdate(){/*Update the values in the html*/
+                document.querySelector('.previousButton').innerHTML = previousArticle;
+                document.querySelector('.nextButton').innerHTML = nextArticle;
+                document.querySelector('.currentArticle').innerHTML = currentArticle;
+            }
 
-                wrapper = document.createElement("div");
-                wrapper.innerHTML = this.responseText;
+            function checkAndUpdate(input){
 
-                scripts = wrapper.getElementsByTagName("SCRIPT");
+                if(input > maxNumberOfArticles){
+                    return 1;
+                } 
+                if(input <= 0){
+                    return maxNumberOfArticles;  
+                } 
+                return input;
+            }
 
-                for (index = scripts.length - 1; index > -1; -- index) {
+            function lockoutSubmit(button) {
+                /*var oldValue = button.value;*/
 
-                  old_script = scripts[index];
+                console.log(button);
+                document.getElementById('next').setAttribute('disabled', true);
+                document.getElementById('prev').setAttribute('disabled', true);
+                
+                setTimeout(function(){
+                    document.getElementById('next').setAttribute('disabled', false);
+                    document.getElementById('prev').setAttribute('disabled', false);
+                }, 600)
 
-                  new_script = document.createElement("script");
-                  new_script.innerHTML = old_script.innerHTML;
+            }
 
-                  for (index1 = old_script.attributes.length - 1; index1 > -1; -- index1) {
+            
+            document.getElementById('next').onclick = function() { /*We need to increment current Number by 1 */
+                if (document.getElementById('next').getAttribute('disabled') == 'false'){
+                    currentArticle++; 
+                    nextArticle++;
+                    previousArticle++;
+                    
+                    currentArticle = checkAndUpdate(currentArticle);
+                    nextArticle = checkAndUpdate(nextArticle);
+                    previousArticle = checkAndUpdate(previousArticle);
 
-                    attribute = old_script.attributes[index1];
-                    new_script.setAttribute(attribute.name, attribute.value);
-
-                  }
-
-                  old_script.parentNode.replaceChild(new_script, old_script);
-
+                    counterVisualUpdate();
+                    lockoutSubmit(this);
                 }
+            }
 
-                while(wrapper.firstChild) {
+            document.getElementById('prev').onclick = function() {/* We need to decrement current number*/
+            
+                if (document.getElementById('prev').getAttribute('disabled') == 'false'){
 
-                  script.parentNode.insertBefore(wrapper.removeChild(wrapper.firstChild), script);
+                    currentArticle--; 
+                    nextArticle--;
+                    previousArticle--;
+                    
+                    currentArticle = checkAndUpdate(currentArticle);
+                    nextArticle = checkAndUpdate(nextArticle);
+                    previousArticle = checkAndUpdate(previousArticle);
 
+                    counterVisualUpdate();
+                    lockoutSubmit(this);
                 }
+            }
 
-                script.parentNode.removeChild(script);
+        </script> <!-- 20-30 min layout,  -->
 
-                this.removeEventListener("error", error);
-                this.removeEventListener("load", load);
 
-              };
+        <script type="text/javascript">
+            //Taken from https://stackoverflow.com/questions/48169773/anchor-link-jump-to-carousel-slide
 
-              error = function(event) {
+            // Create a RegExp for matching expected hash values. 
+            // This is used to ensure our sliding logic happens on only the relevant hash-changes
+            // For this example, I have assumed the pattern to be article-<slide#> 
+            // (Ex: article-1 goes to the first slide)
+            var slideRegExp = /^#article-[0-9]+$/;
 
-                this.removeEventListener("error", error);
-                this.removeEventListener("load", load);
+            // Get a reference to the nav items to update active status  - you may want to do this differently 
+            // based on your usecase
+            var $navItems = $('.nav-item');
 
-                alert("there was an error!");
+            // Initialise the carousel and keep the reference (to avoid repeated jQuery lookups)
+            var $c = $('#article').carousel({
+              interval: false
+            });
 
-              };
+            var slide;
 
-              http_request = new XMLHttpRequest();
-              http_request.addEventListener("error", error);
-              http_request.addEventListener("load", load);
-              http_request.open("GET", url);
-              http_request.send();
+            // Listen for the hash change event on the window object
+            /*$(window).on('hashchange', function(ev) {*/
+              // Hash has changed
+              //Get current has value
+              var hash = window.location.hash;
+/*
 
-            };
+              // Ensure this is a hash for our slider
+              if (slideRegExp.test(hash)) {
+                // RegExp match failed, this is for something else, do nothing
+                // and preserve default behaviour
+                return true;
+              }
+*/
+
+              // Exctract the slide value 
+              slide = +hash.split('-')[1];
+              // Adjust for zero index
+              slide = !isNaN(slide) && slide > 0 ? slide - 1 : 0;
+
+              // Transition to the computed slide
+              console.log("transitioning to: " + slide)
+              $c.carousel(slide);
+
+
+
+            // Update Calvin's Counter updater
+
+              currentArticle = slide+1;
+              nextArticle = currentArticle+1;
+              previousArticle = currentArticle-1;
+
+                currentArticle = checkAndUpdate(currentArticle);
+                nextArticle = checkAndUpdate(nextArticle);
+                previousArticle = checkAndUpdate(previousArticle);
+
+                counterVisualUpdate();
+                lockoutSubmit(this);
+
+              // Update hash to the hash-id of the carousel
+              // You may want to do this using scrollTo or something similar if changing the hash is a problem
+              window.location.hash = '#article';
+
+              // Prevent the default browser action for this hash change
+             /*
+              ev.preventDefault();
+*/
+              
+
+             /* return false;*/
+          /*  });*/
+
+            // Listen for the slide event and update the active status of navigation links
+            // Not sure if this is necessary in your case considering your example uses a dropdown 
+            /*
+            $c.on('slide.bs.carousel', function(ev) {
+              var slide = +ev.to;
+              $navItems.filter('.active').removeClass('active');
+              $navItems.filter("[data-slide='" + slide + "']").addClass('active');
+            });  
+*/
+
+/*object.bootstrap.Carousel({
+                pause: true,
+                interval: false
+                });
+
+                console.log(bootstrap.Carousel.Default);*/
+
         </script>
+
+
 
     </body>
 </html>
