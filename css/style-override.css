@@ -13,6 +13,7 @@ theme.
 
 /*Radio Buttons*/
 
+
 .btn-group-toggle {
   position: relative; 
   top:-4px; 
@@ -109,4 +110,11 @@ overflow:hidden;
 position: center;
   min-width:350px !important ;
 }
+
+/*BLOG TECH - BANNER OVERRIDE*/
+
+
+/*Carousel min boostrap override*/
+
+
 /*# sourceMappingURL=style.css.map 

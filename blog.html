@@ -1,3 +1,18 @@
+<!-- 
+
+Important:
+Question: Are we able to swipe down the article on mobile?
+Question: will we accidentally click to next article?
+Can we save state of 
+
+Nice to haves:
+Swiping left/right to next article
+Lazy loading for articles so you don't load all at once - important for scale
+
+
+ -->
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +22,7 @@
         
         <link rel="icon" href="img/fav-icon.png" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>Sierra</title>
+        <title>Calvin Kim</title>
 
         <!-- Icon css link -->
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +54,7 @@
         <!--================Header Menu Area =================-->
         <header class="main_menu_area">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" style="visibility: hidden; "></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
@@ -48,256 +63,120 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-                        <li class="nav-item dropdown submenu active">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Blog
-                            </a>
+                        <li class="nav-item active"><a class="nav-link" href="index-home.html#index">Home</a></li>
+                        <li class="nav-item dropdown submenu">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blogs</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-                                <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html">Technology</a></li>
+                                
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item dropdown submenu">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio (in construction)</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><a class="nav-link" >Webdev</a></li>
+                                <li class="nav-item"><a class="nav-link" >Data</a></li>
+                                <li class="nav-item"><a class="nav-link" >Video</a></li>
+                                <li class="nav-item"><a class="nav-link" >Photo</a></li>
+                                <li class="nav-item"><a class="nav-link" >Music</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">About Me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <!--================End Header Menu Area =================-->
         
+        
+
         <!--================Banner Area =================-->
-        <section class="banner_area">
-            <div class="container">
-                <div class="banner_inner_text">
-                    <h2>Blog</h2>
-                    <p>Read the news</p>
+        
+        <section class="banner_area" style="height:10vh;">  
+        <div class="grey-overlay"></div>  
+            <div class="container" style="height:10vh;">
+                <div class="banner_inner_text" style="padding-top:2.5vh">
+                    <h2 style="font-size:5vh">Technology Blog</h2>
                 </div>
             </div>
         </section>
         <!--================End Banner Area =================-->
         
+        
+
         <!--================Blog Main Area =================-->
-        <section class="blog_main_area p_100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="blog_main_inner">
-                            <div class="blog_main_item">
-                                <div class="blog_img">
-                                    <img class="img-fluid" src="img/blog/blog-1.jpg" alt="">
-                                    <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
-                                    </div>
-                                </div>
-                                <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
-                                    <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
-                                    </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                                    <a class="more_btn" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="blog_main_item">
-                                <div class="blog_img">
-                                    <img class="img-fluid" src="img/blog/blog-2.jpg" alt="">
-                                    <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
-                                    </div>
-                                </div>
-                                <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
-                                    <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
-                                    </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                                    <a class="more_btn" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="blog_main_item">
-                                <div class="blog_img">
-                                    <img class="img-fluid" src="img/blog/blog-3.jpg" alt="">
-                                    <div class="blog_date">
-                                        <h4>29</h4>
-                                        <h5>October, 2017</h5>
-                                    </div>
-                                </div>
-                                <div class="blog_text">
-                                    <a href="#"><h4>Let us introduce you the best apps</h4></a>
-                                    <div class="blog_author">
-                                        <a href="#">By Lore Papp-Dinea</a>
-                                        <a href="#">Design</a>
-                                    </div>
-                                    <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. </p>
-                                    <a class="more_btn" href="#">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="blog_right_sidebar">
-                            <aside class="r_widget search_widget">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
-                                    </span>
-                                </div>
-                            </aside>
-                            <aside class="r_widget categories_widget">
-                                <div class="r_w_title">
-                                    <h3>Categories</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="#">Vestibulum maximus</a></li>
-                                    <li><a href="#">Nisi eu lobortis pharetra</a></li>
-                                    <li><a href="#">Orci quam accumsan</a></li>
-                                    <li><a href="#">Auguen pharetra massa</a></li>
-                                    <li><a href="#">Tellus ut nulla</a></li>
-                                    <li><a href="#"> Etiam egestas viverra </a></li>
-                                </ul>
-                            </aside>
-                            <aside class="r_widget insta_widget">
-                                <div class="r_w_title">
-                                    <h3>Instagram</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="img/instagram/right-instagram/r-in-1.jpg" alt="">
-                                    </a></li>
-                                    <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="img/instagram/right-instagram/r-in-2.jpg" alt="">
-                                    </a></li>
-                                    <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="img/instagram/right-instagram/r-in-3.jpg" alt="">
-                                    </a></li>
-                                    <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="img/instagram/right-instagram/r-in-4.jpg" alt="">
-                                    </a></li>
-                                    <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="img/instagram/right-instagram/r-in-5.jpg" alt="">
-                                    </a></li>
-                                    <li><a href="https://www.instagram.com/?hl=en">
-                                        <img class="img-fluid" src="img/instagram/right-instagram/r-in-6.jpg" alt="">
-                                    </a></li>
-                                </ul>
-                            </aside>
-                            <aside class="r_widget tag_widget">
-                                <div class="r_w_title">
-                                    <h3>Tags</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="#">branding</a></li>
-                                    <li><a href="#">identity</a></li>
-                                    <li><a href="#">design</a></li>
-                                    <li><a href="#">inspiration</a></li>
-                                    <li><a href="#">web design</a></li>
-                                    <li><a href="#">video</a></li>
-                                    <li><a href="#">photography</a></li>
-                                </ul>
-                            </aside>
-                            <aside class="r_widget quote_widget">
-                                <div class="r_w_title">
-                                    <h3>Quote</h3>
-                                </div>
-                                <img src="img/icon/quote-icon.png" alt="">
-                                <p>Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volut pat. Donec fermen tum convallis.</p>
-                            </aside>
-                            <aside class="r_widget add_widget">
-                                <div class="r_w_title">
-                                    <h3>Add</h3>
-                                </div>
-                                <img class="img-fluid" src="img/add.jpg" alt="">
-                            </aside>
-                        </div>
-                    </div>
+        <section style="height: 80vh">
+            <div class="background_area"></div>
+            <div id="article" class="carousel slide" data-ride="carousel" data-interval="false">
+                <!-- Data-interval: true means it auto transitions between images -->
+      <!-- Indicators -->
+              <ol class="carousel-indicators" disabled="true">
+                <li data-target="#article-1" class="active" style="color:black">0</li>
+                <li data-target="#article-2" style="color:black"></li>
+                <li data-target="#article-3" style="color:black"></li>
+                <li data-target="#article-4" style="color:black"></li>
+                <li data-target="#article-5" style="color:black"></li>
+
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" >
+              <div class="box-shadow-inset-overlay" ></div>  
+                <div class="carousel-item active" > <!-- article 1 -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vRSyc6Im26vr6H35b8C61K4W4qCxtMDZej90jXh2AuC9tO6zgMizXU-oBw1Iut-lAPDcbZDRs9WiAh3/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
                 </div>
-                <nav aria-label="Page navigation example" class="pagination_area">
-                    <ul class="pagination">
-                        <li class="page-item active"><a class="page-link" href="#">01.</a></li>
-                        <li class="page-item"><a class="page-link" href="#">02.</a></li>
-                        <li class="page-item"><a class="page-link" href="#">03.</a></li>
-                        <li class="page-item"><a class="page-link" href="#">04.</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+                <div class="carousel-item" > <!-- Amazon go -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vQJRwZRsescsY6N1X5947zCOrj55r78cVxPWEhrXLTkrPSWmnI2fcTR-tsN3X9HvnrrMNESbdBo6f9A/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item" > <!-- Article 3 -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vQfE1F0RUjFM1vuNuRGpZ-PBKTAZ_PBSxeSSrFRKo_SwkgWk5EtbwkbmkCMc_zzUQgfOUyTKwv9X6mK/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item" > <!-- article 4 -->
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vRqmIZcxnA3IgKAXW54cb0foq1YeE5CxsKQMlSmx6drz7sXj34keKhKCKX-XUh1iVcKkLFPCmsi7LbT/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item" >
+                  <iframe src="https://docs.google.com/document/d/e/2PACX-1vSWbUcDyYZtFqcsT5LG_rdwGE2LJb9KJpSCYet97APZfqCfGNOw9fYk0qMvGzblA3S21duUAXFqGKmh/pub?embedded=true" style="width:100%; height:80vh; position: relative;"></iframe>
+                  
+                </div>
+
+                <div class="carousel-item">
+                  <img src="img/home-slider/slider-bg-3.jpg" alt="New York" style="width:100%; height:80vh">
+                  <div class="carousel-caption">
+                    <h3>Final slide</h3>
+                    <p>Thanks for reading! Hope to get you more content soon.</p>
+                  </div>
+                </div>
+              </div>
+
+             
+          </div>
         </section>
-        <!--================End Blog Main Area =================-->
-        
-        <!--================Footer Area =================-->
-        <footer class="footr_area">
-            <div class="footer_widget_area">
-                <div class="container">
-                    <div class="row footer_widget_inner">
-                        <div class="col-lg-4 col-sm-6">
-                            <aside class="f_widget f_about_widget">
-                                <img src="img/footer-logo.png" alt="">
-                                <p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum.</p>
-                            </aside>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <aside class="f_widget f_insta_widget">
-                                <div class="f_title">
-                                    <h3>Instagram</h3>
-                                </div>
-                                <ul>
-                                    <li><a href="#"><img src="img/instagram/ins-1.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-2.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-3.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-4.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-5.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-6.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-7.jpg" alt=""></a></li>
-                                    <li><a href="#"><img src="img/instagram/ins-8.jpg" alt=""></a></li>
-                                </ul>
-                            </aside>
-                        </div>
-                        <div class="col-lg-4 col-sm-6">
-                            <aside class="f_widget f_subs_widget">
-                                <div class="f_title">
-                                    <h3>Subscribe to newsletter</h3>
-                                </div>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Your e-mail address here" aria-label="Your e-mail address here">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-secondary submit_btn" type="button">Subscribe</button>
-                                    </span>
-                                </div>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer_copyright">
-                <div class="container">
-                    <div class="float-sm-left">
-                        <h5><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></h5>
-                    </div>
-                    <div class="float-sm-right">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
         <!--================End Footer Area =================-->
-        
+        <div class="currentButton">
+            <p class="currentArticleLabel" id="current" style="font-size: 2vh;">Current:</p> 
+            <p class="currentArticle" id="current">0</p> 
+         </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" id="prev" role="button" href="#article" data-slide="prev"  >
+            <div class="previousButton" style="color:black">0</div><!-- Just the text value -->
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="color:black"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" id="next" role="button" href="#article" data-slide="next"  >
+            <div class="nextButton" style="color:black">0</div>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="color:black"></span>
+            <span class="sr-only">Next</span>
+          </a>
         
         
         
@@ -330,5 +209,211 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         
         <script src="js/circle-active.js"></script>
         <script src="js/theme.js"></script>
+
+        <!-- Lazy Loading for carousel not working -->
+        <script>
+        /*  document.addEventListener("DOMContentLoaded", function() {
+      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+      if ("IntersectionObserver" in window) {
+        let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              let lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.srcset = lazyImage.dataset.srcset;
+              lazyImage.classList.remove("lazy");
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          });
+        });
+
+        lazyImages.forEach(function(lazyImage) {
+          lazyImageObserver.observe(lazyImage);
+        });
+      } else {
+        // Possibly fall back to a more compatible method here
+      }
+    });*/
+        </script>
+
+        <!-- Counter for blog pages -->
+        <script>
+        /*Count articles to get number of max articles */
+        var maxNumberOfArticles = $(".carousel-item").length;
+        
+        var currentArticle = 1;
+        var nextArticle = 2; /*currentArticle + 1;*/ /*If current is maxnumber, then nextarticle = 1*/
+        var previousArticle = maxNumberOfArticles; /*currentArticle - 1;*/ /*If current is 1, then previous article = maxnumber*/
+
+
+
+        /*Set button disabled attributes to false*/
+        document.getElementById('next').setAttribute('disabled', false);
+        document.getElementById('prev').setAttribute('disabled', false);
+
+        /*initialization of counter values*/   
+        counterVisualUpdate()
+
+            function counterVisualUpdate(){/*Update the values in the html*/
+                document.querySelector('.previousButton').innerHTML = previousArticle;
+                document.querySelector('.nextButton').innerHTML = nextArticle;
+                document.querySelector('.currentArticle').innerHTML = currentArticle;
+            }
+
+            function checkAndUpdate(input){
+
+                if(input > maxNumberOfArticles){
+                    return 1;
+                } 
+                if(input <= 0){
+                    return maxNumberOfArticles;  
+                } 
+                return input;
+            }
+
+            function lockoutSubmit(button) {
+                /*var oldValue = button.value;*/
+
+                console.log(button);
+                document.getElementById('next').setAttribute('disabled', true);
+                document.getElementById('prev').setAttribute('disabled', true);
+                
+                setTimeout(function(){
+                    document.getElementById('next').setAttribute('disabled', false);
+                    document.getElementById('prev').setAttribute('disabled', false);
+                }, 600)
+
+            }
+
+            
+            document.getElementById('next').onclick = function() { /*We need to increment current Number by 1 */
+                if (document.getElementById('next').getAttribute('disabled') == 'false'){
+                    currentArticle++; 
+                    nextArticle++;
+                    previousArticle++;
+                    
+                    currentArticle = checkAndUpdate(currentArticle);
+                    nextArticle = checkAndUpdate(nextArticle);
+                    previousArticle = checkAndUpdate(previousArticle);
+
+                    counterVisualUpdate();
+                    lockoutSubmit(this);
+                }
+            }
+
+            document.getElementById('prev').onclick = function() {/* We need to decrement current number*/
+            
+                if (document.getElementById('prev').getAttribute('disabled') == 'false'){
+
+                    currentArticle--; 
+                    nextArticle--;
+                    previousArticle--;
+                    
+                    currentArticle = checkAndUpdate(currentArticle);
+                    nextArticle = checkAndUpdate(nextArticle);
+                    previousArticle = checkAndUpdate(previousArticle);
+
+                    counterVisualUpdate();
+                    lockoutSubmit(this);
+                }
+            }
+
+        </script> <!-- 20-30 min layout,  -->
+
+
+        <script type="text/javascript">
+            //Taken from https://stackoverflow.com/questions/48169773/anchor-link-jump-to-carousel-slide
+
+            // Create a RegExp for matching expected hash values. 
+            // This is used to ensure our sliding logic happens on only the relevant hash-changes
+            // For this example, I have assumed the pattern to be article-<slide#> 
+            // (Ex: article-1 goes to the first slide)
+            var slideRegExp = /^#article-[0-9]+$/;
+
+            // Get a reference to the nav items to update active status  - you may want to do this differently 
+            // based on your usecase
+            var $navItems = $('.nav-item');
+
+            // Initialise the carousel and keep the reference (to avoid repeated jQuery lookups)
+            var $c = $('#article').carousel({
+              interval: false
+            });
+
+            var slide;
+
+            // Listen for the hash change event on the window object
+            /*$(window).on('hashchange', function(ev) {*/
+              // Hash has changed
+              //Get current has value
+              var hash = window.location.hash;
+/*
+
+              // Ensure this is a hash for our slider
+              if (slideRegExp.test(hash)) {
+                // RegExp match failed, this is for something else, do nothing
+                // and preserve default behaviour
+                return true;
+              }
+*/
+
+              // Exctract the slide value 
+              slide = +hash.split('-')[1];
+              // Adjust for zero index
+              slide = !isNaN(slide) && slide > 0 ? slide - 1 : 0;
+
+              // Transition to the computed slide
+              console.log("transitioning to: " + slide)
+              $c.carousel(slide);
+
+
+
+            // Update Calvin's Counter updater
+
+              currentArticle = slide+1;
+              nextArticle = currentArticle+1;
+              previousArticle = currentArticle-1;
+
+                currentArticle = checkAndUpdate(currentArticle);
+                nextArticle = checkAndUpdate(nextArticle);
+                previousArticle = checkAndUpdate(previousArticle);
+
+                counterVisualUpdate();
+                lockoutSubmit(this);
+
+              // Update hash to the hash-id of the carousel
+              // You may want to do this using scrollTo or something similar if changing the hash is a problem
+              window.location.hash = '#article';
+
+              // Prevent the default browser action for this hash change
+             /*
+              ev.preventDefault();
+*/
+              
+
+             /* return false;*/
+          /*  });*/
+
+            // Listen for the slide event and update the active status of navigation links
+            // Not sure if this is necessary in your case considering your example uses a dropdown 
+            /*
+            $c.on('slide.bs.carousel', function(ev) {
+              var slide = +ev.to;
+              $navItems.filter('.active').removeClass('active');
+              $navItems.filter("[data-slide='" + slide + "']").addClass('active');
+            });  
+*/
+
+/*object.bootstrap.Carousel({
+                pause: true,
+                interval: false
+                });
+
+                console.log(bootstrap.Carousel.Default);*/
+
+        </script>
+
+
+
     </body>
 </html>

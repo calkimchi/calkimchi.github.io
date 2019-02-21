@@ -66,10 +66,11 @@ a:hover, a:focus {
 }
 
 body {
-  line-height: 28px;
+  /* line-height: 28px; */
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  height: 100vh;
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
@@ -175,10 +176,7 @@ i:before {
 ============================================================================================ */
 /*Calvin Added*/
 
-.nav-item {
 
-  height:51px;
-}
 
 
 
@@ -186,18 +184,23 @@ i:before {
 
 
 .main_menu_area {
-  position: absolute;
+  /* position: absolute; */
   left: 0px;
   top: 0px;
   width: 100%;
   z-index: 30;
-  padding: 0px 45px;
+  /* padding: 0px 45px; */
+  /* height: 10vh; */
 }
 
-.main_menu_area .navbar {
+.navbar.navbar-expand-lg.navbar-light.bg-light{
   padding: 0px;
   border-radius: 0px;
   background-color: transparent !important;
+
+  box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.30);
+  z-index: 3000;
+
 }
 
 .main_menu_area .navbar .navbar-toggler {
@@ -226,13 +229,37 @@ i:before {
   .main_menu_area .navbar .navbar-collapse {
     text-align: right;
     display: block !important;
+  }
+}
+/*
+.main_menu_area .navbar .navbar-nav .nav-item {
+  display: inline-block;
+  text-align: right;
+}
+*/
 
+.navbar-nav{
+   display: inline-block;
+   text-align: right;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    padding: 0px 7vw;
+  } 
+   
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse.collapse {
+    height: 10vh;
   }
 }
 
-.main_menu_area .navbar .navbar-nav {
-  display: inline-block;
-  text-align: right;
+@media (min-width: 992px) {
+  .nav-item .nav-link {
+    height: 10vh;
+  }
 }
 
 .main_menu_area .navbar .navbar-nav li {
@@ -248,7 +275,7 @@ i:before {
   color: #fff;
   letter-spacing: .65px;
   padding: 0px;
-  line-height: 118px;
+  line-height: 700%;
   -webkit-transition: all 400ms linear 0s;
   -o-transition: all 400ms linear 0s;
   transition: all 400ms linear 0s;
@@ -303,6 +330,7 @@ i:before {
   transition: all 400ms linear 0s;
   font-weight: normal;
   text-shadow: none;
+
 }
 
 .main_menu_area .navbar .navbar-nav li.submenu .dropdown-menu li:hover a {
@@ -352,20 +380,44 @@ i:before {
 /* Banner Area css
 ============================================================================================ */
 .banner_area {
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  z-index: -1;
   overflow: hidden;
+  top: 0px;
+  height: 10vh;
+  width: 100%;
 }
 
 .banner_area:before {
   content: "";
-  background: url(../img/banner/banner-bg.png) no-repeat scroll center right;
+  
+  filter: blur(1px);
+  background: url(../img/banner/banner-tech.jpg) no-repeat scroll center right;
   position: absolute;
-  right: 0px;
+  left: 0px;
   top: 0px;
   height: 100%;
-  max-width: 1233px;
   width: 100%;
+}
+
+.background_area {
+  
+  background: url(../img/banner/banner-tech.jpg) no-repeat scroll center right;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
+
+.grey-overlay {
+  background-color: rgba(233, 233, 233, 0.75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .banner_inner_text {
@@ -2617,6 +2669,91 @@ body::-webkit-scrollbar-thumb {
 #navbarSupportedContent::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   outline: 1px solid slategrey;
+}
+
+/*CAROUSEL INDICATORS*/
+
+.carousel{
+  height: 100%;
+  max-width: 870px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  /* display: block; */
+}
+
+.carousel-indicators {/* top: 77vh; *//* margin-bottom: 0px; */list-style-type: none;}
+
+.carousel-indicators li {
+
+  height: 2vh;
+  background-color: rgba(0,0,0,.2);
+  border-radius: 7px 7px 0px 0px;
+  width: 8vw;
+}
+
+.carousel-indicators .active {
+  background-color: rgba(0,0,0,.5);
+
+}
+
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  width: 40vw;
+  height: 10vh;
+  /* bottom: 0px; */
+  background-color: grey;
+  /* margin-right: 0px; */
+}
+
+.currentButton{
+  background-color: grey;
+  width: 20vw;
+  height: 10vh;
+  bottom: 0px;
+  left: 40vw;
+  position: absolute;
+  align-content: center;
+  line-height: 4.5vh;
+}
+
+.previousButton, .nextButton {
+  position: relative;
+  top: 3%;
+  text-align: center;
+  font-size: 3vh;
+}
+
+.currentArticleLabel{
+  position: relative;
+  top: 10%;
+  text-align: center;
+  
+}
+
+.currentArticle{
+  position: relative;
+  top: 3%;
+  text-align: center;
+  font-size: 3vh;
+}
+
+/*iframe*/
+
+.box-shadow-inset-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  /*make the overlay transparent*/
+  background-color: rgba(0, 0, 0, 0.00);
+  color: rgba(0, 0, 0, 0.00);
+  z-index: 4;
+  
+  /*shadow for the overlay*/
+  box-shadow: inset 5px 0px 50px 0px rgba(0, 0, 0, 0.30);
+
+  /*Allows you to click through it*/
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map 
