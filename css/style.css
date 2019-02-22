@@ -213,7 +213,7 @@ i:before {
   height: 3px;
   width: 25px;
   display: block;
-  background: #ffffff;
+  background: black;
   margin-bottom: 3px;
   margin-right: 10px;
   margin-left: 10px;
@@ -460,8 +460,9 @@ i:before {
 .main_slider_area {
   background: url(../img/home-slider/slider-bg-1.png) no-repeat scroll center center;
   background-size: cover;
-  max-height: 600px;
+  max-height: 1080px;
 }
+
 
 .main_slider_area .rev_slider .tp-revslider-mainul li .slider_text_box .first_text {
   font-weight: normal !important;
@@ -507,27 +508,32 @@ i:before {
   -webkit-transition: all 400ms ease-out;
   -o-transition: all 400ms ease-out;
   transition: all 400ms ease-out;
+  visibility: hidden;
 }
 
 .main_slider_area .rev_slider .tp-leftarrow:before, .main_slider_area .rev_slider .tp-rightarrow:before {
   line-height: 100px;
+  visibility: hidden;
 }
 
 .main_slider_area .rev_slider .tp-leftarrow:hover, .main_slider_area .rev_slider .tp-rightarrow:hover {
   background-position: right center;
   color: #fff;
+  visibility: hidden;
 }
 
 .main_slider_area .rev_slider .tp-leftarrow {
   border-bottom-right-radius: 60px;
   border-top-right-radius: 60px;
   border-left: 0px;
+  visibility: hidden;
 }
 
 .main_slider_area .rev_slider .tp-rightarrow {
   border-bottom-left-radius: 60px;
   border-top-left-radius: 60px;
   border-right: 0px;
+  visibility: hidden;
 }
 
 /* End Slider css
@@ -547,7 +553,7 @@ i:before {
 .testimonials_slider:before {
   content: "";
   background: url(../img/3d-shap.png) no-repeat scroll center center;
-  height: 600px;
+  height: 1000px;
   max-width: 524px;
   width: 100%;
   position: absolute;
@@ -828,6 +834,16 @@ i:before {
   padding: 0px 10px;
   margin-bottom: 20px;
   overflow: hidden;
+  width: 100%;
+}
+
+.col-lg-6{
+  width: 100%;
+  max-width: 100%;
+}
+
+.touch_details{
+  width: 100%
 }
 
 .team_img_inner .team_img_item {
@@ -1196,11 +1212,10 @@ i:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 887px;
 }
 
 .best_3d_area .left_3d {
-  width: calc(50% - 160px);
+  
   float: left;
   position: relative;
 }
@@ -1213,13 +1228,13 @@ i:before {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 797px;
+  
   z-index: -1;
 }
 
 .best_3d_area .right_text {
-  width: calc(50% + 160px);
-  float: right;
+  
+  /*float: right;*/
 }
 
 .shap_slider_inner {
