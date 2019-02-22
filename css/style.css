@@ -189,8 +189,8 @@ i:before {
   top: 0px;
   width: 100%;
   z-index: 30;
-  /* padding: 0px 45px; */
-  /* height: 10vh; */
+   padding: 0px 45px; 
+   height: 10vh; 
 }
 
 .navbar.navbar-expand-lg.navbar-light.bg-light{
@@ -421,7 +421,7 @@ i:before {
 }
 
 .banner_inner_text {
-  padding-top: 200px;
+  /*padding-top: 200px;*/
   position: relative;
   padding-bottom: 95px;
 }
@@ -494,6 +494,12 @@ i:before {
 .main_slider_area .rev_slider .tp-bullets .tp-bullet.selected {
   background: #97cdfe;
   border-color: #97cdfe;
+}
+
+.tp-rightarrow{
+  visibility: hidden;
+  opacity: 0%;
+  height: 0px;
 }
 
 .main_slider_area .rev_slider .tp-leftarrow, .main_slider_area .rev_slider .tp-rightarrow {
