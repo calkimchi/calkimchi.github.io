@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baduk (Go) Game</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+      display: block;
+      margin: auto;
+    }
+    body {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Baduk (Go) Game</h1>
+  <canvas id="go-board" width="600" height="600"></canvas>
+  <br>
+  <button onclick="replayGame()">Replay Game</button>
+ <button id="pause-continue-btn" onclick="toggleReplay()">
+    Pause Replay
+  </button>
+<button onclick="undoMove()">Undo Move</button>
+  <script>
+const canvas = document.getElementById('go-board');
+const ctx = canvas.getContext('2d');
+const boardSize = 19;
+const cellSize = canvas.width / boardSize;
+const moves = [];  // Array to store moves for replay
+
+let board = Array.from({ length: boardSize }, () => Array(boardSize).fill(null));
+let currentPlayer = 'black';  // 'black' or 'white'
+let replayPaused = false;  // Track whether the replay is paused
+let replayIndex = 0;  // Track the current move in the replay
+
+const pauseContinueBtn = document.getElementById('pause-continue-btn');
+
+// Draw initial board
+function drawBoard() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = 'black';
+
+  // Draw the grid
+  for (let i = 0; i < boardSize; i++) {
+    ctx.beginPath();
+    ctx.moveTo(cellSize / 2 + i * cellSize, cellSize / 2);
+    ctx.lineTo(cellSize / 2 + i * cellSize, canvas.height - cellSize / 2);
+    ctx.moveTo(cellSize / 2, cellSize / 2 + i * cellSize);
+    ctx.lineTo(canvas.width - cellSize / 2, cellSize / 2 + i * cellSize);
+    ctx.stroke();
+  }
+}
+
+// Draw stones
+function drawStones() {
+  for (let y = 0; y < boardSize; y++) {
+    for (let x = 0; x < boardSize; x++) {
+      if (board[y][x]) {
+        drawStone(x, y, board[y][x]);
+      }
+    }
+  }
+}
+
+// Draw a single stone with a black outline
+function drawStone(x, y, color) {
+  ctx.beginPath();
+  
+  // Draw the stone
+  ctx.arc(
+    cellSize / 2 + x * cellSize,
+    cellSize / 2 + y * cellSize,
+    cellSize / 2 - 2,  // Radius of the stone
+    0,
+    2 * Math.PI
+  );
+  
+  ctx.fillStyle = color;
+  ctx.fill();
+  
+  // Add a black outline
+  ctx.lineWidth = 2;
+  ctx.strokeStyle = 'black';
+  ctx.stroke();
+}
+
+
+// Toggle between black and white players
+function togglePlayer() {
+  currentPlayer = currentPlayer === 'black' ? 'white' : 'black';
+}
+
+// Handle click to place stones
+canvas.addEventListener('click', (e) => {
+  const x = Math.floor((e.offsetX - cellSize / 2) / cellSize);
+  const y = Math.floor((e.offsetY - cellSize / 2) / cellSize);
+
+  if (x >= 0 && x < boardSize && y >= 0 && y < boardSize) {
+    if (!board[y][x]) {
+      board[y][x] = currentPlayer;
+      moves.push({ x, y, color: currentPlayer });
+      drawStone(x, y, currentPlayer);
+      togglePlayer();
+    }
+  }
+});
+
+// Function to remove a stone (manual)
+function removeStone(x, y) {
+  board[y][x] = null;
+  drawBoard();
+  drawStones();
+}
+
+// Replay the game
+function replayGame() {
+  board = Array.from({ length: boardSize }, () => Array(boardSize).fill(null));
+  drawBoard();
+  replayIndex = 0;
+  replayPaused = false;  // Reset the replay state
+
+  replayStep();
+}
+
+// Play a step in the replay
+function replayStep() {
+  if (replayIndex < moves.length && !replayPaused) {
+    const { x, y, color } = moves[replayIndex];
+    board[y][x] = color;
+    drawStone(x, y, color);
+    replayIndex++;
+
+    setTimeout(replayStep, 500);  // Delay for each move
+  }
+}
+
+// Toggle between pausing and continuing the replay
+function toggleReplay() {
+  replayPaused = !replayPaused;
+  pauseContinueBtn.textContent = replayPaused ? 'Continue Replay' : 'Pause Replay';
+
+  if (!replayPaused) {
+    replayStep();
+  }
+}
+
+// Undo the last move
+function undoMove() {
+  if (moves.length > 0) {
+    const lastMove = moves.pop();  // Remove the last move
+    board[lastMove.y][lastMove.x] = null;  // Clear the corresponding stone on the board
+    togglePlayer();  // Switch back to the previous player
+    drawBoard();  // Redraw the board
+    drawStones();  // Redraw all stones
+  }
+}
+
+// Initial board draw
+drawBoard();
+
+  </script>
+</body>
+</html>
