@@ -24,19 +24,27 @@
     Pause Replay
   </button>
 <button onclick="undoMove()">Undo Move</button>
+<button id="toggle-capture-btn" onclick="toggleCapture()">Enable Capture</button>
+<button onclick="undoCapture()">Undo Capture</button> <!-- New Undo Capture Button -->
+
+
   <script>
 const canvas = document.getElementById('go-board');
 const ctx = canvas.getContext('2d');
 const boardSize = 19;
 const cellSize = canvas.width / boardSize;
 const moves = [];  // Array to store moves for replay
+const capturedStones = [];  // Array to store captured stones for undo
+
 
 let board = Array.from({ length: boardSize }, () => Array(boardSize).fill(null));
 let currentPlayer = 'black';  // 'black' or 'white'
 let replayPaused = false;  // Track whether the replay is paused
 let replayIndex = 0;  // Track the current move in the replay
+let capturingEnabled = false;  // Toggle capturing of stones
 
 const pauseContinueBtn = document.getElementById('pause-continue-btn');
+const toggleCaptureBtn = document.getElementById('toggle-capture-btn');
 
 // Draw initial board
 function drawBoard() {
@@ -93,13 +101,17 @@ function togglePlayer() {
   currentPlayer = currentPlayer === 'black' ? 'white' : 'black';
 }
 
-// Handle click to place stones
+// Handle click to place or remove stones based on capturing mode
 canvas.addEventListener('click', (e) => {
   const x = Math.floor((e.offsetX - cellSize / 2) / cellSize);
   const y = Math.floor((e.offsetY - cellSize / 2) / cellSize);
 
   if (x >= 0 && x < boardSize && y >= 0 && y < boardSize) {
-    if (!board[y][x]) {
+    if (capturingEnabled && board[y][x]) {
+      // Remove stone if capture mode is on
+      removeStone(x, y);
+    } else if (!capturingEnabled && !board[y][x]) {
+      // Place stone if capture mode is off
       board[y][x] = currentPlayer;
       moves.push({ x, y, color: currentPlayer });
       drawStone(x, y, currentPlayer);
@@ -108,11 +120,24 @@ canvas.addEventListener('click', (e) => {
   }
 });
 
-// Function to remove a stone (manual)
+// Function to remove a stone and record it in the moves and capturedStones arrays
 function removeStone(x, y) {
+  capturedStones.push({ x, y, color: board[y][x] });  // Save the removed stone for undo
   board[y][x] = null;
+  moves.push({ x, y, color: null });  // Record the removal as a move with `color: null`
   drawBoard();
   drawStones();
+}
+
+// Undo the last capture
+function undoCapture() {
+  if (capturedStones.length > 0) {
+    const lastCapture = capturedStones.pop();  // Retrieve the last captured stone
+    board[lastCapture.y][lastCapture.x] = lastCapture.color;  // Restore the stone to the board
+    moves.push(lastCapture);  // Add the restoration as a move
+    drawBoard();
+    drawStones();
+  }
 }
 
 // Replay the game
@@ -129,14 +154,22 @@ function replayGame() {
 function replayStep() {
   if (replayIndex < moves.length && !replayPaused) {
     const { x, y, color } = moves[replayIndex];
-    board[y][x] = color;
-    drawStone(x, y, color);
+    
+    if (color === null) {
+      // If the color is null, it means the stone was removed
+      board[y][x] = null;
+    } else {
+      // Otherwise, place the stone on the board
+      board[y][x] = color;
+    }
+
+    drawBoard();
+    drawStones();
     replayIndex++;
 
     setTimeout(replayStep, 500);  // Delay for each move
   }
 }
-
 // Toggle between pausing and continuing the replay
 function toggleReplay() {
   replayPaused = !replayPaused;
@@ -156,6 +189,12 @@ function undoMove() {
     drawBoard();  // Redraw the board
     drawStones();  // Redraw all stones
   }
+}
+
+// Toggle capturing mode
+function toggleCapture() {
+  capturingEnabled = !capturingEnabled;
+  toggleCaptureBtn.textContent = capturingEnabled ? 'Disable Capture' : 'Enable Capture';
 }
 
 // Initial board draw
