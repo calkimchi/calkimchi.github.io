@@ -37,6 +37,11 @@
   <button onclick="loadGame(2)">Load Slot 2</button>
   <button onclick="loadGame(3)">Load Slot 3</button>
   
+<br><br>
+<button onclick="exportGame()">Export Game</button>
+<input type="file" id="importFile" accept=".txt" onchange="importGame(event)">
+<br><br>
+
 
   <script>
 const canvas = document.getElementById('go-board');
@@ -224,6 +229,34 @@ moves = JSON.parse(savedMoves);  // Load the moves array from the JSON string
     replayGame();  // Reset the board and replay the game
   } else {
     alert(`No game found in slot ${slot}`);
+  }
+}
+
+// Function to export the current game's moves to a text file
+function exportGame() {
+  const blob = new Blob([JSON.stringify(moves)], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'baduk_game_replay.txt';
+  a.click();
+  URL.revokeObjectURL(url);  // Clean up the object URL after download
+}
+
+// Function to import a game replay from a text file
+function importGame(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        moves = JSON.parse(e.target.result);
+        replayGame();  // Reset the board and replay the imported game
+      } catch (error) {
+        alert('Error reading game file. Make sure it is a valid replay.');
+      }
+    };
+    reader.readAsText(file);
   }
 }
 
