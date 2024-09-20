@@ -61,7 +61,7 @@ let capturingEnabled = false;  // Toggle capturing of stones
 const pauseContinueBtn = document.getElementById('pause-continue-btn');
 const toggleCaptureBtn = document.getElementById('toggle-capture-btn');
 
-// Draw initial board
+// Updated drawBoard function to include star points
 function drawBoard() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.strokeStyle = 'black';
@@ -75,6 +75,30 @@ function drawBoard() {
     ctx.lineTo(canvas.width - cellSize / 2, cellSize / 2 + i * cellSize);
     ctx.stroke();
   }
+
+  // Draw star points (hoshi)
+  drawStarPoints();
+}
+
+// Function to draw star points on the Go board
+function drawStarPoints() {
+  const starPointPositions = [3, 9, 15];  // Positions for the star points
+
+  ctx.fillStyle = 'black';
+  
+  starPointPositions.forEach((x) => {
+    starPointPositions.forEach((y) => {
+      ctx.beginPath();
+      ctx.arc(
+        cellSize / 2 + x * cellSize,  // X coordinate of star point
+        cellSize / 2 + y * cellSize,  // Y coordinate of star point
+        5,  // Star point radius
+        0,
+        2 * Math.PI
+      );
+      ctx.fill();
+    });
+  });
 }
 
 // Draw stones
