@@ -85,6 +85,7 @@ function drawBoard() {
     ctx.lineTo(cellSize / 2 + i * cellSize, canvas.height - cellSize / 2);
     ctx.moveTo(cellSize / 2, cellSize / 2 + i * cellSize);
     ctx.lineTo(canvas.width - cellSize / 2, cellSize / 2 + i * cellSize);
+    ctx.lineWidth = 1;
     ctx.stroke();
   }
 
