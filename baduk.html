@@ -27,13 +27,23 @@
 <button id="toggle-capture-btn" onclick="toggleCapture()">Enable Capture</button>
 <button onclick="undoCapture()">Undo Capture</button> <!-- New Undo Capture Button -->
 
+<br><br>
+<!-- Save and Load Slot Buttons -->
+  <button onclick="saveGame(1)">Save Slot 1</button>
+  <button onclick="saveGame(2)">Save Slot 2</button>
+  <button onclick="saveGame(3)">Save Slot 3</button>
+  <br>
+  <button onclick="loadGame(1)">Load Slot 1</button>
+  <button onclick="loadGame(2)">Load Slot 2</button>
+  <button onclick="loadGame(3)">Load Slot 3</button>
+  
 
   <script>
 const canvas = document.getElementById('go-board');
 const ctx = canvas.getContext('2d');
 const boardSize = 19;
 const cellSize = canvas.width / boardSize;
-const moves = [];  // Array to store moves for replay
+var moves = [];  // Array to store moves for replay
 const capturedStones = [];  // Array to store captured stones for undo
 
 
@@ -195,6 +205,26 @@ function undoMove() {
 function toggleCapture() {
   capturingEnabled = !capturingEnabled;
   toggleCaptureBtn.textContent = capturingEnabled ? 'Disable Capture' : 'Enable Capture';
+}
+
+// Save the game data (moves) to a specific slot in localStorage
+function saveGame(slot) {
+  localStorage.setItem(`gameSlot${slot}`, JSON.stringify(moves));  // Save the moves array as a JSON string
+  alert(`Game saved in slot ${slot}`+JSON.stringify(moves));
+}
+
+// Load the game data from a specific slot in localStorage
+function loadGame(slot) {
+  const savedMoves = localStorage.getItem(`gameSlot${slot}`);
+  
+  if (savedMoves) {
+    alert(`Game loaded in slot ${slot}`+savedMoves);
+
+moves = JSON.parse(savedMoves);  // Load the moves array from the JSON string
+    replayGame();  // Reset the board and replay the game
+  } else {
+    alert(`No game found in slot ${slot}`);
+  }
 }
 
 // Initial board draw
