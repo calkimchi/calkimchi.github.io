@@ -13,6 +13,14 @@
     body {
       text-align: center;
     }
+    button {
+      font-size: 18px;           /* Larger font for readability */
+      padding: 15px 30px;        /* Increased padding for a larger clickable area */
+      margin: 10px;              /* Space between buttons */
+      border-radius: 8px;        /* Rounded corners for aesthetics */
+      cursor: pointer;           /* Pointer cursor for better UX */
+      touch-action: manipulation; /* Optimize for touch screens */
+    }
   </style>
 </head>
 <body>
@@ -36,6 +44,10 @@
   <button onclick="loadGame(1)">Load Slot 1</button>
   <button onclick="loadGame(2)">Load Slot 2</button>
   <button onclick="loadGame(3)">Load Slot 3</button>
+
+<br><br>
+<button onclick="loadAutosave()">Load Autosave</button>
+<br><br>
   
 <br><br>
 <button onclick="exportGame()">Export Game</button>
@@ -140,7 +152,12 @@ function togglePlayer() {
   currentPlayer = currentPlayer === 'black' ? 'white' : 'black';
 }
 
-// Handle click to place or remove stones based on capturing mode
+// Function to save the current moves to the autosave slot
+function autosaveGame() {
+  localStorage.setItem('autosave', JSON.stringify(moves));  // Save the moves array as a JSON string
+}
+
+// Updated event listener for placing stones to include autosave
 canvas.addEventListener('click', (e) => {
   const x = Math.floor((e.offsetX - cellSize / 2) / cellSize);
   const y = Math.floor((e.offsetY - cellSize / 2) / cellSize);
@@ -155,9 +172,22 @@ canvas.addEventListener('click', (e) => {
       moves.push({ x, y, color: currentPlayer });
       drawStone(x, y, currentPlayer);
       togglePlayer();
+      autosaveGame();  // Automatically save after placing a stone
     }
   }
 });
+
+// Load the autosaved game (optional)
+function loadAutosave() {
+  const savedMoves = localStorage.getItem('autosave');
+  
+  if (savedMoves) {
+    moves = JSON.parse(savedMoves);  // Load the moves array from the JSON string
+    replayGame();  // Reset the board and replay the autosaved game
+  } else {
+    alert('No autosave found.');
+  }
+}
 
 // Function to remove a stone and record it in the moves and capturedStones arrays
 function removeStone(x, y) {
